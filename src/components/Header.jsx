@@ -1,13 +1,16 @@
 import PrimaryNav from './navigation/PrimaryNav';
-
 import styles from '../components/Header.module.css';
 
 export default function Header() {
     return (
-        <>
         <div className={styles.header}>
-            <PrimaryNav />
+            <div className={styles.headerNavContainer}>
+                <PrimaryNav />
+            </div>
+            <div className={styles.headerTitle}>
+                <p>Glacier National Park</p>
+                <h1>Highline Tales</h1>
+            </div>
         </div>
-        </>
     )
-}
+};

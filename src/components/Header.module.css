@@ -1,14 +1,56 @@
 .header {
-    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, .4) 75%, rgba(255, 255, 255, 1) 100%), url('public/highlinetales-hero-banner.jpeg');
-
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.35) 50%, rgba(255, 255, 255, .5) 90%, rgba(255, 255, 255, 1) 100%), url('public/highlinetales-hero-banner.jpeg');
     background-size: cover;
-    background-position: center;
-    padding: .5rem 5rem;
+    background-position: center left;
+    padding: 1rem 1.5rem;
     height: 45vh;
+    position: relative;
+}
+
+.headerNavContainer {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.headerTitle {
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 2.5rem;
+    left: 0;
+    right: 0;
+    text-align: left;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+.headerTitle p {
+    line-height: var(--line-height-none);
+    margin: var(--margin-none);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 960px) {
-    .header {
-        padding: .5rem 1rem;
+
+}
+
+@media (max-width: 768px) {
+    .headerNavContainer {
+        /*top: auto;*/
+        /*bottom: 0;*/
+        padding: 0 1rem;
     }
+    .headerTitle {
+        bottom: 2.5rem;
+    }
+
 }

@@ -1,45 +1,104 @@
 /* Typography Scale */
 
 :root {
-    /* HEADINGS */
-    --font-size-h1: 3rem;      /* 48px */
-    --font-size-h2: 2.5rem;    /* 40px */
-    --font-size-h3: 2rem;      /* 32px */
-    --font-size-h4: 1.5rem;    /* 24px */
-    --font-size-h5: 1.25rem;   /* 20px */
-    --font-size-h6: 1rem;      /* 16px */
+    /* FLUID TYPOGRAPHY | BASE VALUES */
+    --font-size-h1-min: 2.25rem;       /* 32px | H1 MOBILE */
+    --font-size-h1-max: 3.5rem;       /* 48px | H1 DESKTOP */
+    --font-size-h2-min: 1.75rem;    /* 28px | H2 MOBILE */
+    --font-size-h2-max: 2.5rem;     /* 40px | H2 DESKTOP */
+
+    --font-size-h3-min: 1.5rem;     /* 24px | H3 MOBILE */
+    --font-size-h3-max: 2rem;       /* 32px | H3 DESKTOP */
+
+    --font-size-h4-min: 1.25rem;    /* 20px | H4 MOBILE */
+    --font-size-h4-max: 1.5rem;     /* 24px | H4 DESKTOP */
+
+    --font-size-h5-min: 1.125rem;   /* 18px | H5 MOBILE */
+    --font-size-h5-max: 1.25rem;    /* 20px | H5 DESKTOP */
+
+    --font-size-h6-min: 1rem;       /* 16px | H6 MOBILE */
+    --font-size-h6-max: 1rem;       /* 16px | H6 DESKTOP */
+
+    --font-size-display-min: 2.5rem; /* 40px | MOBILE */
+    --font-size-display-max: 4rem;   /* 64px - desktop */
 
     /* BODY TEXT */
-    --font-size-xl: 1.25rem;   /* 20px */
-    --font-size-lg: 1.125rem;  /* 18px */
-    --font-size-base: 1rem;    /* 16px */
-    --font-size-sm: 0.875rem;  /* 14px */
-    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-xl: clamp(1.125rem, 1vw + 1rem, 1.25rem);   /* 18px to 20px */
+    --font-size-lg: clamp(1rem, 0.5vw + 0.9rem, 1.125rem);  /* 16px to 18px */
+    --font-size-base: 1rem;                                 /* 16px | CONSTANT */
+    --font-size-sm: 0.875rem;                               /* 14px | CONSTANT */
+    --font-size-xs: 0.75rem;                                /* 12px | CONSTANT */
 
     /* FONT SIZES | HERO | CAPTIONS | FOOTNOTES */
-    --font-size-display: 4rem; /* 64px */
+    --font-size-display: clamp(var(--font-size-display-min), 5vw, var(--font-size-display-max));
     --font-size-caption: 0.75rem; /* 12px */
 
     /* FONT WEIGHTS */
-    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-medium: 600;
+    --font-weight-normal: 400;
 
     /* LINE HEIGHTS */
     --line-height-tight: 1.2;
     --line-height-normal: 1.5;
     --line-height-loose: 1.8;
+    --line-height-none: 0.8;
 
     /* LETTER SPACING */
     --letter-spacing-h1: -0.025em;
+    --letter-spacing-h2: -0.015em;
+    --letter-spacing-h3: -0.01em;
+    --letter-spacing-display: -0.03em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+
+    /* MARGIN FOR HEADING TYPOGRAPHY */
+    --margin-none: 0;
 }
 
 h1 {
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-medium);
+    font-size: clamp(var(--font-size-h1-min), 4vw, var(--font-size-h1-max));
+    font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-h1);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: var(--font-size-h2);
+    font-size: clamp(var(--font-size-h2-min), 3vw, var(--font-size-h2-max));
     font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-h2);
     line-height: var(--line-height-tight);
 }
+
+h3 {
+    font-size: clamp(var(--font-size-h3-min), 2.5vw, var(--font-size-h3-max));
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-h3);
+    line-height: var(--line-height-tight);
+}
+
+h4 {
+    font-size: clamp(var(--font-size-h4-min), 1.5vw, var(--font-size-h4-max));
+    line-height: var(--line-height-tight);
+}
+
+h5 {
+    font-size: clamp(var(--font-size-h5-min), 0.5vw, var(--font-size-h5-max));
+    line-height: var(--line-height-tight);
+}
+
+h6 {
+    font-size: clamp(var(--font-size-h6-min), 0.5vw, var(--font-size-h6-max));
+    line-height: var(--line-height-tight);
+}
+
+body, p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+}
+
+small {
+    font-size: var(--font-size-sm);
+}
+

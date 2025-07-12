@@ -16,6 +16,7 @@ dist-ssr
 .env
 
 # EDITOR DIRECTORIES AND FILES
+.idea/
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -25,4 +26,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.idea/
+

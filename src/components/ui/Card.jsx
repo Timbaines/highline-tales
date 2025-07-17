@@ -1,8 +1,18 @@
 import { FaRegHeart } from 'react-icons/fa';
+import { useRef, useEffect } from 'react';
+import { setupCounter } from '@/utils/counter';
 
 import styles from './Card.module.css';
 
-export default function Card({ adventure }) {
+export default function Card({ adventure })  {
+    const likeCounterRef = useRef(null);
+
+    useEffect(() => {
+        if (likeCounterRef.current) {
+            setupCounter(likeCounterRef.current);
+        }
+    }, []);
+
     return (
         <article className={styles.card}>
             <div className={styles.cardImageContainer}>
@@ -23,8 +33,11 @@ export default function Card({ adventure }) {
                     {adventure.description}
                 </p>
                 <div className={styles.cardActions}>
-                    <a className={styles.cardLink} href="/">Read More →</a>
-                    <span className={styles.cardLikes}><FaRegHeart /></span>
+                    <a className={styles.cardLink} href="/public">Read More →</a>
+                    <div className={styles.cardLikes}>
+                        <FaRegHeart />
+                        <span ref={likeCounterRef} className={styles.likeCounter}></span>
+                    </div>
                 </div>
             </div>
         </article>

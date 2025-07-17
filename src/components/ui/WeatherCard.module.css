@@ -1,0 +1,54 @@
+.weatherCard {
+    /*background: linear-gradient(180deg,rgba(86, 204, 242, 1) 0%, rgba(47, 128, 237, 1) 80%);*/
+    background: linear-gradient(to top, #ECE9E6, #eef2f3);
+    padding: 1rem;
+    border-radius: 1rem;
+    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);*/
+}
+
+.weatherCardHeader h4 {
+  margin: 0;
+}
+
+.weatherForecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weatherCondition {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.weatherCondition p {
+    font-size: 1.15rem;
+    margin-top: .5rem;
+}
+
+.weatherTemp p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.weatherForecastWeek {
+}
+
+.forecastDays {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecastDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forecastDay p {
+    font-size: 1rem;
+    font-weight: 500;
+}

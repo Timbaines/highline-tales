@@ -1,6 +1,6 @@
 import PrimaryNav from './navigation/PrimaryNav';
 
-/***** STYLES MODULE *****/
+/***** MODULE STYLES *****/
 import styles from '../components/Header.module.css';
 
 export default function Header() {

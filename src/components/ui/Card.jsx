@@ -2,6 +2,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { useRef, useEffect } from 'react';
 import { setupCounter } from '@/utils/counter';
 
+/***** MODULE STYLES *****/
 import styles from './Card.module.css';
 
 export default function Card({ adventure })  {

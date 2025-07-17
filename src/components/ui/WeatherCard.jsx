@@ -1,6 +1,6 @@
 import {WiDaySunny, WiDayCloudy, WiDayThunderstorm, WiDayWindy} from 'react-icons/wi';
 
-/***** STYLES MODULE *****/
+/***** MODULE STYLES *****/
 import styles from './WeatherCard.module.css';
 
 export default function WeatherCard() {

@@ -1,6 +1,6 @@
 import WeatherCard from '@/components/ui/WeatherCard';
 
-/***** STYLES MODULE *****/
+/***** MODULE STYLES *****/
 import styles from '@/components/Destination.module.css';
 
 export default function Destination() {

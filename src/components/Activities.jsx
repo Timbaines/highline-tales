@@ -1,7 +1,7 @@
 import Card from '@/components/ui/Card.jsx';
 import {adventureData} from '@/data/adventure-data.js';
 
-/***** STYLES MODULE *****/
+/***** MODULE STYLES *****/
 import styles from '@/components/Activities.module.css'
 
 export default function Activities() {

@@ -1,6 +1,6 @@
 import Logo from '../Logo.jsx';
 
-/***** STYLES MODULE *****/
+/***** MODULE STYLES *****/
 import styles from '../../components/navigation/PrimaryNav.module.css';
 
 export default function PrimaryNav() {

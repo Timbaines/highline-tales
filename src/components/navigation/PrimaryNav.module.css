@@ -19,14 +19,14 @@
     list-style: none;
 }
 
-.navLink {
-    color: #161F13;
-    font-weight: 500;
-    text-decoration: none;
-    cursor: pointer;
-}
+@media (max-width: 960px) and (orientation: landscape) {
+    .primaryNav {
+        padding: 0 1rem;
+        background: rgba(255, 255, 255, 0.85);
+    }
 
-.navLink:hover {
-    color: #706e6e;
+    .navList {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
 }
-

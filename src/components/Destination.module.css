@@ -1,0 +1,17 @@
+.destinationGridContainer {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 2fr 1fr;
+    padding: 1.5rem 0;
+}
+
+.weatherContainer {
+    align-self: center;
+}
+
+@media (max-width: 960px) {
+    .destinationGridContainer {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}

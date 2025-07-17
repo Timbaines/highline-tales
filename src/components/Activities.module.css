@@ -1,0 +1,12 @@
+.activityGridContainer {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 2fr 1fr;
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 960px) {
+    .activityGridContainer {
+        grid-template-columns: 1fr;
+    }
+}

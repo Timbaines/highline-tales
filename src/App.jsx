@@ -1,8 +1,8 @@
-import Header from './components/Header';
-import Card from './components/Card';
-import WeatherCard from './components/ui/WeatherCard';
+import Header from '@/components/Header';
+import Card from '@/components/ui/Card.jsx';
+import WeatherCard from '@/components/ui/WeatherCard';
 
-import { adventureData } from './data/adventure-data.js';
+import { adventureData } from '@/data/adventure-data.js';
 
 import './styles/globals.css';
 

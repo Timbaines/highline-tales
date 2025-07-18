@@ -5,7 +5,8 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import MainLayout from '@/layouts/MainLayout';
 
 /***** PAGES *****/
-import Home from '@/pages/Home';
+import HomePage from '@/pages/HomePage';
+import ActivityPage from '@/pages/ActivityPage';
 
 /***** GLOBAL STYLES *****/
 import '@/styles/globals.css'
@@ -17,7 +18,8 @@ export default function App() {
             <Router>
                 <MainLayout>
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/activities/:slug" element={<ActivityPage />} />
                     </Routes>
                 </MainLayout>
             </Router>

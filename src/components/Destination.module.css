@@ -5,10 +5,15 @@
     padding: 1.5rem 0;
 }
 
+.destinationRow {
+    margin-bottom: 1.25rem;
+}
+
 .weatherContainer {
     align-self: center;
 }
 
+/***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
     .destinationGridContainer {
         grid-template-columns: 1fr;

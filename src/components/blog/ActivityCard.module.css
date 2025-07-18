@@ -1,4 +1,4 @@
-.card {
+.activityCard{
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     display: flex;
@@ -7,11 +7,11 @@
     overflow: hidden;
 }
 
-.card:hover {
+.activityCard:hover {
     border-color: var(--color-border-hover);
 }
 
-.cardImageContainer {
+.activityCardImageContainer {
     width: 240px;
     height: 180px;
     flex-shrink: 0;
@@ -20,31 +20,31 @@
     overflow: hidden;
 }
 
-.cardImage {
+.activityCardImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.2s ease-in-out;
 }
 
-.cardImage:hover {
+.activityCardImage:hover {
     transform: scale(1.15);
 }
 
-.cardContent {
+.activityCardContent {
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 1rem;
 }
 
-.cardTitle {
+.activityCardTitle {
     font-size: 1.25rem;
     font-weight: 500;
     margin: 0;
 }
 
-.cardStats {
+.activityCardStats {
     color: var(--color-text-secondary);
     font-size: 0.875rem;
     margin: 0.5rem 0;
@@ -57,21 +57,21 @@
     margin-right: 0.75rem;
 }
 
-.cardDescription {
+.activityCardDescription {
     color: var(--color-text-secondary);
     flex-grow: 1;
     margin: .75rem 0;
     overflow: hidden;
 }
 
-.cardActions {
+.activityCardActions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
 }
 
-.cardLink {
+.activityCardLink {
     font-size: 1rem;
     font-weight: 500;
     color: var(--color-text-secondary);
@@ -80,11 +80,11 @@
     user-select: none;
 }
 
-.cardLink:hover {
+.activityCardLink:hover {
     color: var(--color-anchor-link);
 }
 
-.cardLikes {
+.activityCardLikes {
     display: flex;
     align-items: center;
     gap: 0.625rem;
@@ -94,7 +94,7 @@
     user-select: none;
 }
 
-.cardLikes:hover {
+.activityCardLikes:hover {
     color: #3DCF8E;
 }
 
@@ -107,46 +107,46 @@
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
-    .card {
+    .activityCard {
         background: var(--color-bg-card);
         border-radius: .5rem;
         padding: 0;
     }
 
-    .cardImageContainer {
+    .activityCardImageContainer {
         width: 100px;
         height: 100px;
         position: static;
         margin: 1rem;
     }
 
-    .cardImage {
+    .activityCardImage {
         position: static;
     }
 
-    .cardImage:hover {
+    .activityCardImage:hover {
         transform: none;
     }
 
-    .cardContent {
+    .activityCardContent {
         padding: 1rem 1rem 1rem 0;
         margin: 0;
     }
 
-    .cardTitle {
+    .activityCardTitle {
         font-size: 1.1rem;
     }
 
-    .cardStats {
+    .activityCardStats {
         font-size: 0.8125rem;
         margin: 0.5rem 0;
     }
 
-    .cardLink {
+    .activityCardLink {
         font-size: 0.875rem;
     }
 
-    .cardLikes {
+    .activityCardLikes {
         font-size: 0.9rem;
     }
 
@@ -156,30 +156,30 @@
 }
 
 @media (max-width: 480px) {
-    .card {
+    .activityCard {
         margin-bottom: 1rem;
     }
 
-    .cardImageContainer {
+    .activityCardImageContainer {
         width: 80px;
         height: 80px;
         margin: 0.75rem;
     }
 
-    .cardContent {
+    .activityCardContent {
         padding: 0.75rem 0.75rem 0.75rem 0;
     }
 
-    .cardTitle {
+    .activityCardTitle {
         font-size: 1rem;
     }
 
-    .cardStats {
+    .activityCardStats {
         font-size: 0.75rem;
         margin: 0.375rem 0;
     }
 
-    .cardDescription {
+    .activityCardDescription {
         display: none;
     }
 
@@ -187,11 +187,11 @@
         gap: 0.25rem;
     }
 
-    .cardActions {
+    .activityCardActions {
         margin-top: 0.5rem;
     }
 
-    .cardLink {
+    .activityCardLink {
         font-size: 0.8125rem;
     }
 }

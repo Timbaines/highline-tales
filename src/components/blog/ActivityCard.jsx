@@ -28,20 +28,20 @@ export default function ActivityCard({ adventure })  {
     const difficultyColor = getDifficultyColor(adventure.difficulty);
 
     return (
-        <article className={styles.card}>
-            <div className={styles.cardImageContainer}>
+        <article className={styles.activityCard}>
+            <div className={styles.activityCardImageContainer}>
                 <img
-                    className={styles.cardImage}
+                    className={styles.activityCardImage}
                     src={adventure.image}
                     alt={adventure.title}
                 />
             </div>
-            <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>
+            <div className={styles.activityCardContent}>
+                <h3 className={styles.activityCardTitle}>
                     <a>{adventure.title}</a>
                 </h3>
 
-                <p className={styles.cardStats}>
+                <p className={styles.activityCardStats}>
                     <span className={styles.statItem}>
                         <FaCalendarAlt size={12} /> {adventure.date}
                     </span>
@@ -54,12 +54,12 @@ export default function ActivityCard({ adventure })  {
                     </span>
                 </p>
 
-                <p className={styles.cardDescription}>
+                <p className={styles.activityCardDescription}>
                     {adventure.description}
                 </p>
-                <div className={styles.cardActions}>
-                    <a className={styles.cardLink} href="/public">Read More →</a>
-                    <div className={styles.cardLikes}>
+                <div className={styles.activityCardActions}>
+                    <a className={styles.activityCardLink} href="/public">Read More →</a>
+                    <div className={styles.activityCardLikes}>
                         <FaRegHeart />
                         <span ref={likeCounterRef} className={styles.likeCounter} aria-label="like this activity"></span>
                     </div>

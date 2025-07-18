@@ -1,11 +1,11 @@
 import { useRef, useEffect } from 'react';
-import { setupCounter } from '@/utils/counter';
+import { setupCounter } from '@/utils/counter.js';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkedAlt, FaRegHeart } from 'react-icons/fa';
 
 /***** MODULE STYLES *****/
-import styles from './Card.module.css';
+import styles from './ActivityCard.module.css';
 
-export default function Card({ adventure })  {
+export default function ActivityCard({ adventure })  {
     const likeCounterRef = useRef(null);
 
     useEffect(() => {

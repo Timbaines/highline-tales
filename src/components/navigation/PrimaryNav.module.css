@@ -1,29 +1,47 @@
 .primaryNav {
-    background: rgb(255, 255, 255);
+    background: var(--color-bg-opacity);
     backdrop-filter: blur(10px);
-    border: 1px solid #DCDCDC;
+    border: 1px solid var(--color-border);
     border-radius: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: .75rem 1.5rem;
+    position: relative;
+}
+
+.navLogoLink {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 140px;
 }
 
 .navList {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
     font-size: 1rem;
 }
 
-.navItem {
+.navItem  {
     list-style: none;
 }
 
+.navItem a:hover {
+    color: var(--color-anchor-link);
+}
+
+.activeLink {
+    color: var(--color-text-primary);
+}
+
+.activeLink:hover {
+    color: var(--color-anchor-link);
+}
+
+/***** MEDIA QUERIES *****/
 @media (max-width: 960px) and (orientation: landscape) {
-    .primaryNav {
-        padding: 0 1rem;
-        background: rgba(255, 255, 255, 0.85);
-    }
 
     .navList {
         gap: 1rem;

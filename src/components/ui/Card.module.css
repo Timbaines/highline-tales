@@ -1,10 +1,14 @@
 .card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
     display: flex;
     border-radius: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
 
 .card:hover {
-    background: #fafafa;
+    border-color: var(--color-border-hover);
 }
 
 .cardImageContainer {
@@ -12,7 +16,7 @@
     height: 180px;
     flex-shrink: 0;
     border-radius: 0.5rem;
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem;
     overflow: hidden;
 }
 
@@ -32,7 +36,6 @@
     flex-direction: column;
     flex: 1;
     padding: 1rem;
-    margin: 1rem 1rem 1rem 0;
 }
 
 .cardTitle {
@@ -42,12 +45,22 @@
 }
 
 .cardStats {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
     margin: 0.5rem 0;
 }
 
+.statItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 0.75rem;
+}
+
 .cardDescription {
+    color: var(--color-text-secondary);
     flex-grow: 1;
-    margin: 0;
+    margin: .75rem 0;
     overflow: hidden;
 }
 
@@ -55,48 +68,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
+}
+
+.cardLink {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.cardLink:hover {
+    color: var(--color-anchor-link);
 }
 
 .cardLikes {
     display: flex;
     align-items: center;
-    gap: 7px;
-    font-size: 1rem;
+    gap: 0.625rem;
+    font-size: 1.25rem;
     cursor: pointer;
     transition: color 0.2s ease;
     user-select: none;
 }
 
 .cardLikes:hover {
-    color: #ff6b6b;
+    color: #3DCF8E;
 }
 
 .likeCounter {
-    color: #161F13;
+    color: var(--color-text-primary);
     font-size: 1rem;
-    min-width: 20px;
+    min-width: 1.25rem;
     user-select: none;
 }
 
-
+/***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
     .card {
-        background: none;
-        border-bottom: 1px solid #DCDCDC;
-        border-radius: 0;
-        padding: .25rem 0;
-        margin-bottom: .75rem;
-    }
-
-    .card:hover {
-        background: none;
+        background: var(--color-bg-card);
+        border-radius: .5rem;
+        padding: 0;
     }
 
     .cardImageContainer {
-        width: 75px;
-        height: 75px;
-        border-radius: 0.5rem;
-        margin: 0.5rem 0 0.5rem 0;
+        width: 100px;
+        height: 100px;
+        position: static;
+        margin: 1rem;
+    }
+
+    .cardImage {
+        position: static;
     }
 
     .cardImage:hover {
@@ -104,31 +129,69 @@
     }
 
     .cardContent {
-        padding: 0.5rem 0 0.5rem 1rem;
+        padding: 1rem 1rem 1rem 0;
         margin: 0;
     }
-    
+
     .cardTitle {
         font-size: 1.1rem;
     }
-    
+
     .cardStats {
-        font-size: 13px;
-    }
-    
-    .cardDescription {
-        display: none;
+        font-size: 0.8125rem;
+        margin: 0.5rem 0;
     }
 
     .cardLink {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .cardLikes {
         font-size: 0.9rem;
-
     }
+
     .likeCounter {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .cardImageContainer {
+        width: 80px;
+        height: 80px;
+        margin: 0.75rem;
+    }
+
+    .cardContent {
+        padding: 0.75rem 0.75rem 0.75rem 0;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .cardStats {
+        font-size: 0.75rem;
+        margin: 0.375rem 0;
+    }
+
+    .cardDescription {
+        display: none;
+    }
+
+    .statItem {
+        gap: 0.25rem;
+    }
+
+    .cardActions {
+        margin-top: 0.5rem;
+    }
+
+    .cardLink {
+        font-size: 0.8125rem;
     }
 }

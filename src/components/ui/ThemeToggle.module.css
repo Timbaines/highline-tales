@@ -1,0 +1,10 @@
+.themetoggle {
+    background: none;
+    color: var(--color-text-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    padding: .5rem;
+}

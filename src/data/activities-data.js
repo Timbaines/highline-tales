@@ -1,4 +1,4 @@
-export const adventureData = [
+export const activitiesData = [
     {
         "id": 1,
         "image": "/base-camp-kayaking.jpg",

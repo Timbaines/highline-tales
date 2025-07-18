@@ -110,7 +110,7 @@
     .activityCard {
         background: var(--color-bg-card);
         border-radius: .5rem;
-        padding: 0;
+        padding: .5rem 0;
     }
 
     .activityCardImageContainer {
@@ -147,18 +147,15 @@
     }
 
     .activityCardLikes {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .likeCounter {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .activityCard {
-        margin-bottom: 1rem;
-    }
 
     .activityCardImageContainer {
         width: 80px;
@@ -189,9 +186,5 @@
 
     .activityCardActions {
         margin-top: 0.5rem;
-    }
-
-    .activityCardLink {
-        font-size: 0.8125rem;
     }
 }

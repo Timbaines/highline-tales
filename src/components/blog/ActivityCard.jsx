@@ -1,11 +1,12 @@
 import { useRef, useEffect } from 'react';
-import { setupCounter } from '@/utils/counter.js';
-import { FaCalendarAlt, FaTachometerAlt, FaMapMarkedAlt, FaRegHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { setupCounter } from '@/utils/counter';
+import { FaCalendarAlt, FaStar, FaMapMarkerAlt, FaRegHeart } from 'react-icons/fa';
 
 /***** MODULE STYLES *****/
 import styles from './ActivityCard.module.css';
 
-export default function ActivityCard({ adventure })  {
+export default function ActivityCard({ activity })  {
     const likeCounterRef = useRef(null);
 
     useEffect(() => {
@@ -25,40 +26,57 @@ export default function ActivityCard({ adventure })  {
         }
     };
 
-    const difficultyColor = getDifficultyColor(adventure.difficulty);
+    const difficultyColor = getDifficultyColor(activity.difficulty);
+
+    const createSlug = (title) => {
+        return title
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .trim();
+    };
+
+    const activitySlug = createSlug(activity.title);
 
     return (
         <article className={styles.activityCard}>
             <div className={styles.activityCardImageContainer}>
                 <img
                     className={styles.activityCardImage}
-                    src={adventure.image}
-                    alt={adventure.title}
+                    src={activity.image}
+                    alt={activity.title}
                 />
             </div>
             <div className={styles.activityCardContent}>
                 <h3 className={styles.activityCardTitle}>
-                    <a>{adventure.title}</a>
+                    <Link to={`/activities/${activitySlug}`}>
+                        {activity.title}
+                    </Link>
                 </h3>
 
                 <p className={styles.activityCardStats}>
                     <span className={styles.statItem}>
-                        <FaCalendarAlt size={12} /> {adventure.date}
+                        <FaCalendarAlt size={14} /> {activity.date}
                     </span>
                     <span className={styles.statItem}>
-                        <FaTachometerAlt size={14} color={difficultyColor} />{adventure.difficulty}
+                        <FaStar size={14} color={difficultyColor} />{activity.difficulty}
                     </span>
 
                     <span className={styles.statItem}>
-                        <FaMapMarkedAlt size={14} /> {adventure.miles} miles
+                        <FaMapMarkerAlt size={14} /> {activity.miles} miles
                     </span>
                 </p>
 
                 <p className={styles.activityCardDescription}>
-                    {adventure.description}
+                    {activity.description}
                 </p>
                 <div className={styles.activityCardActions}>
-                    <a className={styles.activityCardLink} href="/public">Read More →</a>
+                    <Link
+                        className={styles.activityCardLink}
+                        to={`/activities/${activitySlug}`}
+                    >
+                        Read More →
+                    </Link>
                     <div className={styles.activityCardLikes}>
                         <FaRegHeart />
                         <span ref={likeCounterRef} className={styles.likeCounter} aria-label="like this activity"></span>

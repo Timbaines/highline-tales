@@ -6,7 +6,7 @@ import styles from '@/components/ActivityList.module.css'
 
 export default function ActivityList() {
     return (
-        <div className={styles.activityGridContainer}>
+        <div className={styles.activityListGridContainer}>
             <div>
                 <h3>Adventures</h3>
                 {activitiesData.map(adventure => (

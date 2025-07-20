@@ -1,0 +1,61 @@
+.mobileMenuContainer {
+    display: none;
+}
+
+.menuToggle {
+    background: none;
+    color: var(--color-text-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    padding: .5rem;
+    cursor: pointer;
+    margin-left: 0.25rem;
+}
+
+.menuToggle:hover {
+    border-color: var(--color-border-hover);
+}
+
+.menuOverlay {
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    left: 0;
+    background: var(--color-bg-opacity);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.mobileNavList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobileNavItem {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.mobileNavItem a:hover {
+    color: var(--color-link-hover);
+}
+
+.activeLink {
+    color: var(--color-link-primary);
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 480px) {
+    .mobileMenuContainer {
+        display: block;
+    }
+}

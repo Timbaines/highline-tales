@@ -1,17 +1,15 @@
-import { Link, useLocation } from 'react-router-dom';
-import Logo from '../Logo.jsx';
+import { Link } from 'react-router-dom';
+import Logo from '@/components/Logo';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import MobileNav from '@/components/navigation/MobileNav';
+import { useNavigation } from '@/hooks/useNavigation';
+
 
 /***** MODULE STYLES *****/
-import styles from '../../components/navigation/PrimaryNav.module.css';
+import styles from './PrimaryNav.module.css';
 
 export default function PrimaryNav() {
-    const location = useLocation();
-
-    const isActiveLink = (path) => {
-        if (path === '/' && location.pathname === '/') return true;
-        return path !== '/' && location.pathname.startsWith(path);
-    };
+    const { filteredNavItems, isActiveLink } = useNavigation();
 
     return (
         <nav className={styles.primaryNav}>
@@ -19,20 +17,23 @@ export default function PrimaryNav() {
                 <Logo />
             </Link>
             <ul className={styles.navList}>
-                <li className={styles.navItem}>
-                    <Link to="/activities" className={isActiveLink('/activities') ? styles.activeLink : ''}>
-                        Activities
-                    </Link>
-                </li>
-                <li className={styles.navItem}>
-                    <Link to="/gear" className={isActiveLink('/gear') ? styles.activeLink : ''}>
-                        Gear
-                    </Link>
-                </li>
-                <li className={styles.navItem}>
+                {filteredNavItems.map((item) => (
+                    <li key={item.id} className={styles.navItem}>
+                        <Link
+                            to={item.href}
+                            className={isActiveLink(item.href) ? styles.activeLink : ''}
+                        >
+                            {item.label}
+                        </Link>
+                    </li>
+                ))}
+                <li className={styles.navItemToggle}>
                     <ThemeToggle />
+                </li>
+                <li className={styles.navItemMobile}>
+                    <MobileNav />
                 </li>
             </ul>
         </nav>
-    )
+    );
 };

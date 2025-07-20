@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useNavigation } from '@/hooks/useNavigation';
+import { createPortal } from 'react-dom';
 
 /***** MODULE STYLES *****/
 import styles from './MobileNav.module.css';
@@ -34,24 +35,30 @@ export default function MobileNav() {
             </button>
 
             {isOpen && (
-                <div className={styles.menuOverlay}>
-                    <ul className={styles.mobileNavList}>
-                        {filteredNavItems.map((item) => (
-                            <li key={item.id} className={styles.mobileNavItem}>
-                                <Link
-                                    to={item.href}
-                                    className={isActiveLinkWithStartsWith(item.href) ? styles.activeLink : ''}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        handleNavClick(item.href);
-                                    }}
-                                >
-                                    {item.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <>
+                    {createPortal(
+                        <div className={styles.menuOverlay}></div>,
+                        document.body
+                    )}
+                    <div className={styles.menuOverlayMenuContainer}>
+                        <ul className={styles.mobileNavList}>
+                            {filteredNavItems.map((item) => (
+                                <li key={item.id} className={styles.mobileNavItem}>
+                                    <Link
+                                        to={item.href}
+                                        className={isActiveLinkWithStartsWith(item.href) ? styles.activeLink : ''}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleNavClick(item.href);
+                                        }}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </>
             )}
         </div>
     );

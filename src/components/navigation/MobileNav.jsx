@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useNavigation } from '@/hooks/useNavigation';
+
+/***** RENDER OVERLAY TO DOCUMENT BODY *****/
 import { createPortal } from 'react-dom';
 
 /***** MODULE STYLES *****/

@@ -2,7 +2,6 @@
     background-size: cover;
     background-position: center;
     padding: 1rem 1.5rem;
-    min-height: 45vh;
     position: relative;
 }
 
@@ -13,7 +12,7 @@
     right: 0;
     z-index: 100;
     width: 100%;
-    max-width: 1360px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -27,7 +26,7 @@
     text-align: left;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 1280px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
 }
@@ -51,7 +50,7 @@
 
 @media (max-width: 768px) {
     .headerNavContainer {
-        padding: 0 1rem;
+        padding: 0 .75rem;
     }
     .headerTitle {
         bottom: 2.5rem;

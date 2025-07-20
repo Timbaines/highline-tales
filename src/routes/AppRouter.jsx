@@ -5,6 +5,7 @@ import HomePage from '@/pages/HomePage';
 import ActivitiesPage from '@/pages/ActivitiesPage';
 import ActivityPage from '@/pages/ActivityPage';
 import GearPage from '@/pages/GearPage';
+import GalleryPage from '@/pages/GalleryPage';
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: 'gear',
                 element: <GearPage />
+            },
+            {
+                path: 'gallery',
+                element: <GalleryPage />
             }
         ]
     }

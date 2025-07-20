@@ -1,6 +1,6 @@
 import { useLocation, useMatch } from 'react-router-dom';
 import PrimaryNav from './navigation/PrimaryNav';
-import { activitiesData } from '@/data/activities-data.js';
+import { activitiesData } from '@/data/activitiesData.js';
 
 /***** MODULE STYLES *****/
 import styles from '../components/Header.module.css';
@@ -25,16 +25,23 @@ export default function Header() {
         switch (location.pathname) {
             case '/':
                 return {
-                    backgroundImage: '/highline-tales-hero-banner-2.jpg',
+                    backgroundImage: '/highline-trail-hero.webp',
                     subtitle: 'Glacier National Park',
                     title: 'Highline Tales',
                     height: '45vh'
                 };
+            case '/gear':
+                return {
+                    backgroundImage: '/ht-banner2.webp',
+                    subtitle: 'Trail Hiking',
+                    title: 'Checklist',
+                    height: '45vh'
+                };
             case '/activities':
                 return {
-                    backgroundImage: '/highlinetales-hero-banner.jpg',
-                    subtitle: 'Big Sky',
-                    title: 'Our Activities',
+                    backgroundImage: '/highline-trail-hero-banner.webp',
+                    subtitle: 'Exploring Montana',
+                    title: 'Big Sky Adventures',
                     height: '45vh'
                 };
             default:
@@ -46,18 +53,18 @@ export default function Header() {
 
                     if (activity) {
                         return {
-                            backgroundImage: activity.image || '/highline-tales-hero-banner.jpg',
-                            subtitle: `${activity.difficulty} • ${activity.miles} miles`,
+                            backgroundImage: activity.image || '/highline-tales-hero-banner.webp',
+                            subtitle: `${activity.subtitle}`,
                             title: activity.title,
                             height: '45vh'
                         };
                     }
                 }
                 return {
-                    backgroundImage: '/highline-tales-hero-banner-2.jpg',
+                    backgroundImage: '/highline-tales-hero-banner.webp',
                     subtitle: 'Glacier National Park',
                     title: 'Highline Tales',
-                    height: '45vh'
+                    height: '55vh'
                 };
         }
     };

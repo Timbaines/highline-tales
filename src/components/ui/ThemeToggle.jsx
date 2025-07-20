@@ -11,10 +11,10 @@ const ThemeToggle = ({ className, ...props }) => {
         <button
             type="button"
             onClick={toggleTheme}
-            className={`${styles.themetoggle} ${className || ''}`}
+            className={`${styles.themeToggle} ${className || ''}`}
             {...props}
         >
-            {isDarkMode ? <FiSun size={14} /> : <FiMoon size={14} />}
+            {isDarkMode ? <FiSun size={14} className={styles.toggleSun} /> : <FiMoon size={14} />}
         </button>
     )
 }

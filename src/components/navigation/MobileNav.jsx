@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useNavigation } from '@/hooks/useNavigation';
@@ -23,6 +23,23 @@ export default function MobileNav() {
         navigate(href);
         setIsOpen(false);
     };
+
+    // CLOSE MOBILE MENU ON WINDOW RESIZE
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768 && isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // CLEAN UP EVENT LISTENER WHEN COMPONENT UNMOUNTS
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isOpen]);
+
 
     return (
         <div className={styles.mobileMenuContainer}>

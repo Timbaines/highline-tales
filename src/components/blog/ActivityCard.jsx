@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { setupCounter } from '@/utils/counter';
-import { FaCalendarAlt, FaStar, FaMapMarkerAlt, FaRegHeart } from 'react-icons/fa';
+import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt, FaRegHeart } from 'react-icons/fa';
 
 /***** MODULE STYLES *****/
-import styles from './ActivityCard.module.css';
+import styles from '@/components/blog/ActivityCard.module.css';
 
 export default function ActivityCard({ activity })  {
     const likeCounterRef = useRef(null);
@@ -20,7 +20,7 @@ export default function ActivityCard({ activity })  {
 
         switch (difficultyLevel) {
             case 'easy': return '#3DCF8E';
-            case 'moderate': return '#F7C23D';
+            case 'moderate': return '#FFBF00';
             case 'hard': return '#F75F5F';
             default: return '#3DCF8E';
         }
@@ -48,22 +48,23 @@ export default function ActivityCard({ activity })  {
                 />
             </div>
             <div className={styles.activityCardContent}>
-                <h3 className={styles.activityCardTitle}>
-                    <Link to={`/activities/${activitySlug}`}>
-                        {activity.title}
-                    </Link>
-                </h3>
-
-                <p className={styles.activityCardStats}>
-                    <span className={styles.statItem}>
+                <div className={styles.activityCardHeader}>
+                    <h3 className={styles.activityCardTitle}>
+                        <Link to={`/activities/${activitySlug}`}>
+                            {activity.title}
+                        </Link>
+                    </h3>
+                    <span className={styles.activityDate}>
                         <FaCalendarAlt size={14} /> {activity.date}
                     </span>
+                </div>
+                <p className={styles.activityCardStats}>
                     <span className={styles.statItem}>
-                        <FaStar size={14} color={difficultyColor} />{activity.difficulty}
+                        <FaTachometerAlt size={14} color={difficultyColor} />{activity.difficulty}
                     </span>
 
                     <span className={styles.statItem}>
-                        <FaMapMarkerAlt size={14} /> {activity.miles} miles
+                        <FaMapMarkerAlt size={16} /> {activity.miles} miles
                     </span>
                 </p>
 

@@ -38,15 +38,27 @@
     padding: 1rem;
 }
 
+.activityCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .activityCardTitle {
     font-size: 1.25rem;
     font-weight: 500;
     margin: 0;
 }
 
-.activityCardStats {
+.activityDate {
     color: var(--color-text-secondary);
     font-size: 0.875rem;
+    margin: 0;
+}
+
+.activityCardStats {
+    color: var(--color-text-badge);
+    font-size: 1rem;
     margin: 0.5rem 0;
 }
 
@@ -72,16 +84,12 @@
 }
 
 .activityCardLink {
+    color: var(--color-link-secondary);
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-text-secondary);
     text-decoration: none;
     transition: color 0.2s ease;
     user-select: none;
-}
-
-.activityCardLink:hover {
-    color: var(--color-anchor-link);
 }
 
 .activityCardLikes {
@@ -95,7 +103,7 @@
 }
 
 .activityCardLikes:hover {
-    color: #3DCF8E;
+    color: var(--color-link-hover);
 }
 
 .likeCounter {
@@ -108,9 +116,7 @@
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
     .activityCard {
-        background: var(--color-bg-card);
         border-radius: .5rem;
-        padding: .5rem 0;
     }
 
     .activityCardImageContainer {
@@ -133,8 +139,16 @@
         margin: 0;
     }
 
+    .activityCardHeader {
+        margin-bottom: 0.15rem;
+    }
+
     .activityCardTitle {
         font-size: 1.1rem;
+    }
+
+    .activityDate {
+        font-size: 0.8125rem;
     }
 
     .activityCardStats {
@@ -157,6 +171,10 @@
 
 @media (max-width: 480px) {
 
+    .activityCard {
+        align-items: center;
+    }
+
     .activityCardImageContainer {
         width: 80px;
         height: 80px;
@@ -169,6 +187,10 @@
 
     .activityCardTitle {
         font-size: 1rem;
+    }
+
+    .activityDate {
+        font-size: 0.75rem;
     }
 
     .activityCardStats {

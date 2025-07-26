@@ -14,6 +14,7 @@ dist-ssr
 
 # ENVIRONMENT VARIABLES
 .env
+.env.local
 
 # EDITOR DIRECTORIES AND FILES
 .idea/

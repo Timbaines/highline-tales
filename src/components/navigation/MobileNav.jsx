@@ -24,6 +24,23 @@ export default function MobileNav() {
         setIsOpen(false);
     };
 
+    const handleOverlayClick = () => {
+        setIsOpen(false);
+    }
+
+    // CONTROL BODY SCROLL WHEN MENU IS OPEN
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        // CLEANUP FUNCTION TO ENSURE SCROLL IS RE-ENABLED WHEN COMPONENT UNMOUNTS
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     // CLOSE MOBILE MENU ON WINDOW RESIZE
     useEffect(() => {
         const handleResize = () => {
@@ -56,7 +73,10 @@ export default function MobileNav() {
             {isOpen && (
                 <>
                     {createPortal(
-                        <div className={styles.menuOverlay}></div>,
+                        <div className={styles.menuOverlay}
+                            onClick={handleOverlayClick}
+                            aria-label="Close menu overlay">
+                        </div>,
                         document.body
                     )}
                     <div className={styles.menuOverlayMenuContainer}>

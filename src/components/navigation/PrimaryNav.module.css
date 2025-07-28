@@ -1,27 +1,25 @@
 .primaryNav {
-    background: var(--color-bg-opacity);
+    background: var(--color-bg-opacity-primary);
     backdrop-filter: blur(10px);
     border: 1px solid var(--color-border);
-    border-radius: 100px;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .75rem 1.5rem;
+    padding: .75rem;
     position: relative;
 }
 
 .navLogoLink {
     display: flex;
-    padding: 0;
-    margin: 0;
-    width: 150px;
+    width: 120px;
 }
 
 .navList {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    font-size: 1rem;
+    gap: 1rem;
+    font-size: var(--font-size-sm);
 }
 
 .navItem  {
@@ -50,7 +48,7 @@
 }
 
 /***** MEDIA QUERIES *****/
-@media (max-width: 960px) and (orientation: landscape) {
+@media (max-width: 960px) {
     .navList {
         gap: 1rem;
         font-size: 0.9rem;
@@ -59,14 +57,9 @@
 
 @media (max-width: 768px) {
     .primaryNav {
-        padding: 0.75rem 0.75rem;
+        padding: .5rem 00.75rem;
     }
-    .navLogoLink {
-        width: 120px;
-    }
-}
 
-@media (max-width: 480px) {
     .navItem {
         visibility: hidden;
     }

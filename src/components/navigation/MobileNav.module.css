@@ -35,13 +35,13 @@
 
 .menuOverlayMenuContainer {
     position: fixed;
-    top: 4rem;
+    top: 3.5rem;
     right: 0;
     left: 0;
     background: var(--color-bg-primary);
     border: 1px solid var(--color-border);
     border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 0.5rem;
     z-index: 100;
     padding: 1.5rem;

@@ -24,6 +24,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -35,7 +36,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 1rem;
+    padding: 1.5rem 1.5rem 1.5rem 0;
 }
 
 .activityCardHeader {
@@ -50,14 +51,21 @@
     margin: 0;
 }
 
+.activityCardTitle:hover {
+    text-decoration: underline;
+}
+
 .activityDate {
     color: var(--color-text-secondary);
     font-size: 0.875rem;
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .activityCardStats {
-    color: var(--color-text-badge);
+    color: var(--color-text-secondary);
     font-size: 1rem;
     margin: 0.5rem 0;
 }
@@ -69,10 +77,18 @@
     margin-right: 0.75rem;
 }
 
+.icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
 .activityCardDescription {
     color: var(--color-text-secondary);
     flex-grow: 1;
-    margin: .75rem 0;
+    margin:  0;
     overflow: hidden;
 }
 
@@ -92,42 +108,15 @@
     user-select: none;
 }
 
-.activityCardLikes {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: color 0.2s ease;
-    user-select: none;
-}
-
-.activityCardLikes:hover {
-    color: var(--color-link-hover);
-}
-
-.likeCounter {
-    color: var(--color-text-primary);
-    font-size: 1rem;
-    min-width: 1.25rem;
-    user-select: none;
-}
-
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
     .activityCard {
-        border-radius: .5rem;
+        border-radius: .75rem;
     }
 
     .activityCardImageContainer {
-        width: 100px;
-        height: 100px;
-        position: static;
-        margin: 1rem;
-    }
-
-    .activityCardImage {
-        position: static;
+        width: 120px;
+        height: 120px;
     }
 
     .activityCardImage:hover {
@@ -136,7 +125,6 @@
 
     .activityCardContent {
         padding: 1rem 1rem 1rem 0;
-        margin: 0;
     }
 
     .activityCardHeader {
@@ -156,22 +144,19 @@
         margin: 0.5rem 0;
     }
 
+    .icon {
+        width: 12px;
+        height: 12px;
+    }
+
     .activityCardLink {
         font-size: 0.875rem;
-    }
-
-    .activityCardLikes {
-        font-size: 1rem;
-    }
-
-    .likeCounter {
-        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-
     .activityCard {
+        border-radius: 0.5rem;
         align-items: center;
     }
 
@@ -204,6 +189,11 @@
 
     .statItem {
         gap: 0.25rem;
+    }
+
+    .icon {
+        width: 10px;
+        height: 10px;
     }
 
     .activityCardActions {

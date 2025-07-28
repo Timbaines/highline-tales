@@ -1,19 +1,11 @@
-import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { setupCounter } from '@/utils/counter';
-import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt, FaRegHeart } from 'react-icons/fa';
+import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import LikeButton from '@/components/ui/LikeButton';
 
 /***** MODULE STYLES *****/
-import styles from '@/components/blog/ActivityCard.module.css';
+import styles from '@/components/activity/ActivityCard.module.css';
 
 export default function ActivityCard({ activity })  {
-    const likeCounterRef = useRef(null);
-
-    useEffect(() => {
-        if (likeCounterRef.current) {
-            setupCounter(likeCounterRef.current);
-        }
-    }, []);
 
     const getDifficultyColor = (difficulty) => {
         const difficultyLevel = difficulty.toLowerCase().trim();
@@ -55,16 +47,18 @@ export default function ActivityCard({ activity })  {
                         </Link>
                     </h3>
                     <span className={styles.activityDate}>
-                        <FaCalendarAlt size={14} /> {activity.date}
+                        <FaCalendarAlt className={styles.icon} /> {activity.date}
                     </span>
                 </div>
                 <p className={styles.activityCardStats}>
                     <span className={styles.statItem}>
-                        <FaTachometerAlt size={14} color={difficultyColor} />{activity.difficulty}
+                        <FaTachometerAlt className={styles.icon} style={{color: difficultyColor}} />
+                        <span>{activity.difficulty}</span>
                     </span>
 
                     <span className={styles.statItem}>
-                        <FaMapMarkerAlt size={16} /> {activity.miles} miles
+                        <FaMapMarkerAlt className={styles.icon} />
+                        <span>{activity.miles} miles</span>
                     </span>
                 </p>
 
@@ -78,9 +72,8 @@ export default function ActivityCard({ activity })  {
                     >
                         Read More →
                     </Link>
-                    <div className={styles.activityCardLikes}>
-                        <FaRegHeart />
-                        <span ref={likeCounterRef} className={styles.likeCounter} aria-label="like this activity"></span>
+                    <div>
+                        <LikeButton />
                     </div>
                 </div>
             </div>

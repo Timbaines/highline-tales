@@ -1,0 +1,53 @@
+.activityBack {
+    background: none;
+    color: var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-accent);
+    border-radius: 100px;
+    padding: .25rem;
+}
+
+.statItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 0.75rem;
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 0 0.25rem;
+}
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    background: var(--color-bg-badge);
+    color: var(--color-text-badge);
+    font-size: var(--font-size-xs);
+    padding: 0.15rem 0.65rem;
+    border: 1px solid var(--color-border-badge);
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contentContainer {
+    margin-top: 1.5rem;
+}

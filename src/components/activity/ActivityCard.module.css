@@ -36,7 +36,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 1.5rem 1.5rem 1.5rem 0;
+    padding: 1rem 1rem 1rem 0;
 }
 
 .activityCardHeader {
@@ -88,7 +88,7 @@
 .activityCardDescription {
     color: var(--color-text-secondary);
     flex-grow: 1;
-    margin:  0;
+    margin:  0.5rem 0;
     overflow: hidden;
 }
 
@@ -115,16 +115,12 @@
     }
 
     .activityCardImageContainer {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: auto;
     }
 
     .activityCardImage:hover {
         transform: none;
-    }
-
-    .activityCardContent {
-        padding: 1rem 1rem 1rem 0;
     }
 
     .activityCardHeader {
@@ -151,6 +147,17 @@
 
     .activityCardLink {
         font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .activityCardImageContainer {
+        width: 100px;
+        height: auto;
+        margin: 0.75rem;
+    }
+    .activityCardDescription {
+        display: none;
     }
 }
 
@@ -181,10 +188,6 @@
     .activityCardStats {
         font-size: 0.75rem;
         margin: 0.375rem 0;
-    }
-
-    .activityCardDescription {
-        display: none;
     }
 
     .statItem {

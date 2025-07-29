@@ -1,7 +1,7 @@
 /***** MODULE STYLES *****/
-import styles from '@/layouts/SectionLayout.module.css';
+import styles from '@/layouts/HomePageLayout.module.css';
 
-export default function SectionLayout({
+export default function HomePageLayout({
       leftTopContent,
       leftBottomContent = null,
       rightTopContent = null,

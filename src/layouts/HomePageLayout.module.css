@@ -1,12 +1,12 @@
 .gridContainer {
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
         "left-top right-top"
         "left-bottom right-bottom";
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .leftTop {
@@ -39,5 +39,12 @@
             "right-top"
             "left-bottom"
             "right-bottom";
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gridContainer {
+        gap: 1rem;
     }
 }

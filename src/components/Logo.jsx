@@ -7,7 +7,6 @@ export default function Logo() {
     const fillColor = isDarkMode ? "#FFFFFF" : "#0F0F0F";
     const strokeColor = isDarkMode ? "#3DCF8E" : "#0F0F0F";
 
-
     return (
         <>
             <svg
@@ -24,7 +23,7 @@ export default function Logo() {
                     strokeLinejoin: "round",
                     strokeMiterlimit: 1.5
                 }}
-                >
+            >
                 <g transform="matrix(1,0,0,1,-6.06809,-1.41507)">
                     <g>
                         <g transform="matrix(1,0,0,1,10.5356,-9.70632)">

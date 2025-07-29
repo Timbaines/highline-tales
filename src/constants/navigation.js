@@ -13,11 +13,6 @@ export const navItems = [
         id: "gear",
         label: "Gear",
         href: "/gear"
-    },
-    {
-        id: "gallery",
-        label: "Gallery",
-        href: "/gallery"
     }
 ];
 

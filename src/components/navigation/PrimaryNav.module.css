@@ -12,7 +12,7 @@
 
 .navLogoLink {
     display: flex;
-    width: 120px;
+    width: 130px;
 }
 
 .navList {
@@ -49,9 +49,16 @@
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
+    .primaryNav {
+        border-radius: 0.75rem;
+    }
     .navList {
         gap: 1rem;
         font-size: 0.9rem;
+    }
+
+    .navLogoLink {
+        width: 120px;
     }
 }
 

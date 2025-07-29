@@ -172,6 +172,10 @@
         align-items: center;
     }
 
+    .activityCard:hover {
+        border-color: var(--color-border);
+    }
+
     .activityCardImageContainer {
         width: 80px;
         height: 80px;

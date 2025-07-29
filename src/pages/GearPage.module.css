@@ -1,0 +1,9 @@
+.gearContainer {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 960px) {
+    .gearContainer {
+        grid-template-columns: 1fr;
+    }
+}

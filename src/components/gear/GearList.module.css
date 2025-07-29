@@ -1,0 +1,42 @@
+.hikingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.text {
+    font-size: var(--font-size-base);
+}
+
+@media (max-width: 768px) {
+    .hikingGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hikingGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,37 @@
+import {
+    FaWater,
+    FaUtensils,
+    FaHiking,
+    FaSocks,
+    FaTshirt,
+    FaCompass,
+    FaSun,
+    FaHatCowboySide,
+    FaBug,
+    FaLightbulb,
+    FaFirstAid,
+    FaMapMarkedAlt,
+    FaMobileAlt,
+    FaBatteryFull,
+    FaCamera,
+    FaBinoculars
+} from 'react-icons/fa';
+
+export const hikingGearData = [
+    { id: 1, name: "2L Water Bottles", icon: FaWater },
+    { id: 2, name: "Trail Lunch", icon: FaUtensils },
+    { id: 3, name: "Hiking Boots", icon: FaHiking },
+    { id: 4, name: "Hiking Socks", icon: FaSocks },
+    { id: 5, name: "Extra Clothes", icon: FaTshirt },
+    { id: 6, name: "Compass", icon: FaCompass },
+    { id: 7, name: "Sunscreen", icon: FaSun },
+    { id: 8, name: "Sun Hat", icon: FaHatCowboySide },
+    { id: 9, name: "Repellent", icon: FaBug },
+    { id: 10, name: "Flashlight", icon: FaLightbulb },
+    { id: 11, name: "First Aid Kit", icon: FaFirstAid },
+    { id: 12, name: "Map", icon: FaMapMarkedAlt },
+    { id: 13, name: "Phone", icon: FaMobileAlt },
+    { id: 14, name: "Power Bank", icon: FaBatteryFull },
+    { id: 16, name: "Camera", icon: FaCamera },
+    { id: 17, name: "Binoculars", icon: FaBinoculars },
+];

@@ -32,45 +32,42 @@ export default function ActivityPage() {
 
     return (
         <>
-            <section>
-                <div style={{ marginBottom: '2rem' }}>
+            <div className={styles.activityContainer}>
+                <div>
                     <div>
-                        <div style={{ display: 'flex', marginBottom: '1rem' }}>
-                            <div className={styles.statItem}>
-                                <FaCalendarAlt className={styles.icon} /> {activity.date}
-                            </div>
-                            <div className={styles.statItem}>
-                                <span className={styles.divider}>|</span>
-                                <FaTachometerAlt className={styles.icon} style={{color: difficultyColor}} />
-                                {activity.difficulty}
-                            </div>
-                            <div className={styles.statItem}>
-                                <span className={styles.divider}>|</span>
-                                <FaMapMarkerAlt className={styles.icon} /> {activity.miles} miles
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2>{activity.heading}</h2>
-                        </div>
-
-                        {/* ADD MORE STRUCTURED CONTENT HERE */}
-                        {activity.content && (
-                            <div dangerouslySetInnerHTML={{ __html: activity.description }} />
-                        )}
+                        <h2>{activity.heading}</h2>
                     </div>
-                    <div style={{ marginTop: '2rem' }}>
-                        <h3>Features</h3>
-                        <div className={styles.tagContainer}>
-                            {Array.isArray(activity.tag) && activity.tag.map((tag, index) => (
-                                <span key={index} className={styles.tag}>
-                                    {tag}
-                                </span>
-                            ))}
+                    <div style={{ display: 'flex', marginBottom: '2rem', fontSize: '0.875rem' }}>
+                        <div className={styles.statItem}>
+                            <FaCalendarAlt className={styles.icon} /> {activity.date}
                         </div>
-                        <div className={styles.contentContainer}>
-                            <p>{activity.content}</p>
+                        <div className={styles.statItem}>
+                            <span className={styles.divider}>|</span>
+                            <FaTachometerAlt className={styles.icon} style={{color: difficultyColor}} />
+                            {activity.difficulty}
                         </div>
+                        <div className={styles.statItem}>
+                            <span className={styles.divider}>|</span>
+                            <FaMapMarkerAlt className={styles.icon} /> {activity.miles} miles
+                        </div>
+                    </div>
+
+                    {/* ADD MORE STRUCTURED CONTENT HERE */}
+                    {activity.content && (
+                        <div dangerouslySetInnerHTML={{ __html: activity.description }} />
+                    )}
+                </div>
+                <div style={{ marginTop: '2rem' }}>
+                    <h3>Details</h3>
+                    <div className={styles.tagContainer}>
+                        {Array.isArray(activity.tag) && activity.tag.map((tag, index) => (
+                            <span key={index} className={styles.tag}>
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                    <div className={styles.contentContainer}>
+                        <p>{activity.content}</p>
                     </div>
                 </div>
                 <nav style={{ marginBottom: '2rem' }}>
@@ -86,13 +83,13 @@ export default function ActivityPage() {
                         }}
                     >
                         <IoIosArrowRoundBack
-                            className={styles.activityBack}
-                            size={32}
+                            className={styles.activityBackButton}
+                            size={30}
                         />
                         Back to Activities
                     </Link>
                 </nav>
-            </section>
+            </div>
         </>
       )
     }

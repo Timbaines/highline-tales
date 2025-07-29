@@ -6,7 +6,6 @@ import ActivitiesPage from '@/pages/ActivitiesPage';
 import ActivityPage from '@/pages/ActivityPage';
 import ActivityNotFound from '@/components/activity/ActivityError.jsx'
 import GearPage from '@/pages/GearPage';
-import GalleryPage from '@/pages/GalleryPage';
 import { createSlug } from '@/utils/stringUtils';
 import { activitiesData } from '@/data/activitiesData.js';
 
@@ -50,10 +49,6 @@ const router = createBrowserRouter([
             {
                 path: 'gear',
                 element: <GearPage />
-            },
-            {
-                path: 'gallery',
-                element: <GalleryPage />
             }
         ]
     }

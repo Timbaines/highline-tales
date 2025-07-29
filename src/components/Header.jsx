@@ -28,8 +28,8 @@ export default function Header() {
             case '/gear':
                 return {
                     backgroundImage: '/ht-banner2.webp',
-                    subtitle: 'Trail Hiking',
-                    title: 'Checklist',
+                    subtitle: 'Glacier National Park',
+                    title: 'Trail Gear Essentials',
                     height: '45vh'
                 };
             case '/gallery':
@@ -42,7 +42,7 @@ export default function Header() {
             case '/activities':
                 return {
                     backgroundImage: '/highline-trail-hero-banner.webp',
-                    subtitle: 'Exploring Montana',
+                    subtitle: 'Glacier National Park',
                     title: 'Big Sky Adventures',
                     height: '45vh'
                 };

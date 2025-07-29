@@ -4,8 +4,24 @@ import MainLayout from '@/layouts/MainLayout';
 import HomePage from '@/pages/HomePage';
 import ActivitiesPage from '@/pages/ActivitiesPage';
 import ActivityPage from '@/pages/ActivityPage';
+import ActivityNotFound from '@/components/activity/ActivityError.jsx'
 import GearPage from '@/pages/GearPage';
 import GalleryPage from '@/pages/GalleryPage';
+import { createSlug } from '@/utils/stringUtils';
+import { activitiesData } from '@/data/activitiesData.js';
+
+const activityLoader = ({ params }) => {
+    const { slug } = params;
+    const activity = activitiesData.find(
+        activity => createSlug(activity.title) === slug
+    );
+
+    if (!activity) {
+        throw new Response("Activity not found", { status: 404 });
+    }
+
+    return { activity };
+};
 
 const router = createBrowserRouter([
     {
@@ -27,7 +43,9 @@ const router = createBrowserRouter([
             },
             {
                 path: 'activities/:slug',
-                element: <ActivityPage />
+                element: <ActivityPage />,
+                loader: activityLoader,
+                errorElement: <ActivityNotFound />
             },
             {
                 path: 'gear',

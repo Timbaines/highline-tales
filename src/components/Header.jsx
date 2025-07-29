@@ -1,6 +1,8 @@
 import { useLocation, useMatch } from 'react-router-dom';
 import PrimaryNav from './navigation/PrimaryNav';
+import { createSlug } from '@/utils/stringUtils';
 import { activitiesData } from '@/data/activitiesData.js';
+
 
 /***** MODULE STYLES *****/
 import styles from '../components/Header.module.css';
@@ -12,13 +14,6 @@ export default function Header() {
     // GET SLUG FROM MATCH OBJECT IF USER IS ON AN INDIVIDUAL ACTIVITY PAGE
     const slug = match?.params?.slug;
 
-    const createSlug = (title) => {
-        return title
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .trim();
-    };
 
     // DEFINE PAGE SPECIFIC CONTENT
     const getPageContent = () => {
@@ -35,6 +30,13 @@ export default function Header() {
                     backgroundImage: '/ht-banner2.webp',
                     subtitle: 'Trail Hiking',
                     title: 'Checklist',
+                    height: '45vh'
+                };
+            case '/gallery':
+                return {
+                    backgroundImage: '/gallery-banner3.webp',
+                    subtitle: 'Glacier National Park',
+                    title: 'Image Gallery',
                     height: '45vh'
                 };
             case '/activities':
@@ -61,10 +63,10 @@ export default function Header() {
                     }
                 }
                 return {
-                    backgroundImage: '/highline-tales-hero-banner.webp',
+                    backgroundImage: '/gallery-banner1.webp',
                     subtitle: 'Glacier National Park',
                     title: 'Highline Tales',
-                    height: '55vh'
+                    height: '45vh'
                 };
         }
     };

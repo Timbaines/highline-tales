@@ -150,11 +150,16 @@
     }
 }
 
+@media (max-width: 960px) {
+   .activityCard {
+       margin-bottom: 0.75rem;
+   }
+}
+
 @media (max-width: 768px) {
     .activityCardImageContainer {
         width: 100px;
-        height: auto;
-        margin: 0.75rem;
+        height: 100px;
     }
     .activityCardDescription {
         display: none;
@@ -170,7 +175,6 @@
     .activityCardImageContainer {
         width: 80px;
         height: 80px;
-        margin: 0.75rem;
     }
 
     .activityCardContent {

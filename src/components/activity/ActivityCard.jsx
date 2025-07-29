@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { createSlug } from '@/utils/stringUtils';
 import LikeButton from '@/components/ui/LikeButton';
 
 /***** MODULE STYLES *****/
@@ -19,15 +20,6 @@ export default function ActivityCard({ activity })  {
     };
 
     const difficultyColor = getDifficultyColor(activity.difficulty);
-
-    const createSlug = (title) => {
-        return title
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .trim();
-    };
-
     const activitySlug = createSlug(activity.title);
 
     return (

@@ -1,42 +1,36 @@
 .gridContainer {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: auto auto;
+    gap: 1rem;
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-rows: minmax(0, 1fr);
     grid-template-areas:
-        "left-top right-top"
-        "left-bottom right-bottom";
+       "left-bottom right-bottom";
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
-.leftTop {
-    grid-area: left-top;
-}
-
-.leftBottom {
-    grid-area: left-bottom;
-}
-
-.rightTop {
-    grid-area: right-top;
-}
-
-.rightBottom {
-    grid-area: right-bottom;
-}
-
-.fullWidth .leftTop,
-.fullWidth .leftBottom {
+.leftGrid {
     grid-column: 1 / -1;
+    grid-area: left-bottom;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
+
+.rightGrid {
+    grid-area: right-bottom;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
     .gridContainer {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         grid-template-areas:
-            "left-top"
-            "right-top"
             "left-bottom"
             "right-bottom";
         gap: 1.5rem;

@@ -51,10 +51,6 @@
     margin: 0;
 }
 
-.activityCardTitle:hover {
-    text-decoration: underline;
-}
-
 .activityDate {
     color: var(--color-text-secondary);
     font-size: 0.875rem;

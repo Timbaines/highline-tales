@@ -8,7 +8,7 @@ export default function ActivitiesPage() {
       <>
           <h2>Activities</h2>
           <div className={styles.activitiesContainer}>
-              <ActivityList />
+              <ActivityList layout="grid" />
           </div>
       </>
 

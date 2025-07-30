@@ -31,33 +31,30 @@ export default function ActivityPage() {
 
 
     return (
-        <>
-            <div className={styles.activityContainer}>
-                <div>
-                    <div>
-                        <h2>{activity.heading}</h2>
-                    </div>
-                    <div style={{ display: 'flex', marginBottom: '2rem', fontSize: '0.875rem' }}>
-                        <div className={styles.statItem}>
-                            <FaCalendarAlt className={styles.icon} /> {activity.date}
-                        </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.divider}>|</span>
-                            <FaTachometerAlt className={styles.icon} style={{color: difficultyColor}} />
-                            {activity.difficulty}
-                        </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.divider}>|</span>
-                            <FaMapMarkerAlt className={styles.icon} /> {activity.miles} miles
-                        </div>
-                    </div>
+        <div className={styles.activityContainer}>
+            <div>
+                <h2>{activity.heading}</h2>
 
-                    {/* ADD MORE STRUCTURED CONTENT HERE */}
-                    {activity.content && (
-                        <div dangerouslySetInnerHTML={{ __html: activity.description }} />
-                    )}
+                <div className={styles.activityStats}>
+                    <div className={styles.statItem}>
+                        <FaCalendarAlt className={styles.icon} />{activity.date}
+                    </div>
+                    <div className={styles.statItem}>
+                        <span className={styles.divider}>|</span>
+                        <FaTachometerAlt className={styles.icon} style={{color: difficultyColor}} />
+                        {activity.difficulty}
+                    </div>
+                    <div className={styles.statItem}>
+                        <span className={styles.divider}>|</span>
+                        <FaMapMarkerAlt className={styles.icon} /> {activity.miles} miles
+                    </div>
                 </div>
-                <div style={{ marginTop: '2rem' }}>
+
+                {activity.content && (
+                    <div dangerouslySetInnerHTML={{ __html: activity.description }} />
+                )}
+
+                <div className={styles.detailsSection}>
                     <h3>Details</h3>
                     <div className={styles.tagContainer}>
                         {Array.isArray(activity.tag) && activity.tag.map((tag, index) => (
@@ -66,30 +63,20 @@ export default function ActivityPage() {
                             </span>
                         ))}
                     </div>
+
                     <div className={styles.contentContainer}>
-                        <p>{activity.content}</p>
+                        <div dangerouslySetInnerHTML={{ __html: activity.content }} />
                     </div>
                 </div>
-                <nav style={{ marginBottom: '2rem' }}>
-                    <Link
-                        to="/activities"
-                        style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '0.75rem',
-                            textDecoration: 'none',
-                            color: 'var(--primary-color)',
-                            fontSize: '1rem'
-                        }}
-                    >
-                        <IoIosArrowRoundBack
-                            className={styles.activityBackButton}
-                            size={30}
-                        />
+
+                <nav className={styles.activityNav}>
+                    <Link to="/activities" className={styles.activityBackLink}>
+                        <IoIosArrowRoundBack className={styles.activityBackButton} size={30} />
                         Back to Activities
                     </Link>
                 </nav>
             </div>
-        </>
-      )
+        </div>
+
+    )
     }

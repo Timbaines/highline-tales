@@ -24,47 +24,48 @@ export default function ActivityCard({ activity })  {
 
     return (
         <article className={styles.activityCard}>
-            <div className={styles.activityCardImageContainer}>
-                <img
-                    className={styles.activityCardImage}
-                    src={activity.image}
-                    alt={activity.title}
-                />
-            </div>
-            <div className={styles.activityCardContent}>
-                <div className={styles.activityCardHeader}>
-                    <h3 className={styles.activityCardTitle}>
-                        <Link to={`/activities/${activitySlug}`}>
-                            {activity.title}
-                        </Link>
-                    </h3>
-                    <span className={styles.activityDate}>
+            <div className={styles.activityCardInner}>
+                <div className={styles.activityCardImageContainer}>
+                    <img
+                        className={styles.activityCardImage}
+                        src={activity.image}
+                        alt={activity.title}
+                    />
+                </div>
+                <div className={styles.activityCardContent}>
+                    <div className={styles.activityCardHeader}>
+                        <h3 className={styles.activityCardTitle}>
+                            <Link to={`/activities/${activitySlug}`}>
+                                {activity.title}
+                            </Link>
+                        </h3>
+                        <span className={styles.activityDate}>
                         <FaCalendarAlt className={styles.icon} /> {activity.date}
                     </span>
-                </div>
-                <p className={styles.activityCardStats}>
+                    </div>
+                    <p className={styles.activityCardStats}>
                     <span className={styles.statItem}>
                         <FaTachometerAlt className={styles.icon} style={{color: difficultyColor}} />
                         <span>{activity.difficulty}</span>
                     </span>
 
-                    <span className={styles.statItem}>
+                        <span className={styles.statItem}>
                         <FaMapMarkerAlt className={styles.icon} />
                         <span>{activity.miles} miles</span>
                     </span>
-                </p>
+                    </p>
 
-                <p className={styles.activityCardDescription}>
-                    {activity.description}
-                </p>
-                <div className={styles.activityCardActions}>
-                    <Link
-                        className={styles.activityCardLink}
-                        to={`/activities/${activitySlug}`}
-                    >
-                        Read More →
-                    </Link>
-                    <div>
+                    <p className={styles.activityCardDescription}>
+                        {activity.description}
+                    </p>
+                    <div className={styles.activityCardActions}>
+                        <Link
+                            className={styles.activityCardLink}
+                            to={`/activities/${activitySlug}`}
+                        >
+                            Read More →
+                        </Link>
+
                         <LikeButton />
                     </div>
                 </div>

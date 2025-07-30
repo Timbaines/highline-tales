@@ -1,0 +1,19 @@
+.activityListContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.grid {
+    display: contents;
+}
+
+@media (max-width: 960px) {
+    .activityListContainer {
+        gap: 0;
+        margin-bottom: 1.25rem;
+    }
+}

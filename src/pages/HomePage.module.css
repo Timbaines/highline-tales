@@ -1,0 +1,41 @@
+.homePageContainer {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.homePageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 2rem 0;
+}
+
+.homePageForecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homeTitle {
+    display: none;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 960px) {
+    .homePageContainer {
+        grid-template-columns: 1fr;
+        margin-bottom: 0
+    }
+
+    .homeTitle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .homePageContent {
+        margin: 0 0 1rem 0;
+    }
+}

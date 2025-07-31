@@ -32,13 +32,6 @@ export default function Header() {
                     title: 'Trail Gear Essentials',
                     height: '45vh'
                 };
-            case '/gallery':
-                return {
-                    backgroundImage: '/gallery-banner3.webp',
-                    subtitle: 'Glacier National Park',
-                    title: 'Image Gallery',
-                    height: '45vh'
-                };
             case '/activities':
                 return {
                     backgroundImage: '/highline-trail-hero-banner.webp',

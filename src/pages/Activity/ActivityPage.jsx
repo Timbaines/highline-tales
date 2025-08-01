@@ -3,7 +3,7 @@ import { useLoaderData, Link, Navigate } from 'react-router-dom';
 import {FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt  } from 'react-icons/fa';
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-import styles from '@/pages/ActivityPage.module.css';
+import styles from '@/pages/Activity/ActivityPage.module.css';
 
 export default function ActivityPage() {
     const { activity } = useLoaderData();

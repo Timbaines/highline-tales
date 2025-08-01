@@ -1,7 +1,7 @@
-import GearList from '@/components/gear/GearList';
+import GearList from '@/components/gear/GearList.jsx';
 
 /***** MODULE STYLES *****/
-import styles from '@/pages/GearPage.module.css';
+import styles from '@/pages/Gear/GearPage.module.css';
 
 export default function GearPage() {
     return (

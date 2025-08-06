@@ -1,0 +1,105 @@
+.weatherCard {
+    background: var(--color-bg-card);
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 2rem 0;
+}
+
+.weatherCardTitle h3 {
+    color: var(--color-text-primary);
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.weatherForecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weatherCondition {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--color-text-primary);
+}
+
+.range {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.range p span {
+    font-size: 1rem;
+}
+
+.weatherCondition p {
+    color: var(--color-text-primary);
+    font-size: 1.15rem;
+    margin: 0 .25rem 0 0;
+}
+
+.weatherTemp p {
+    color: var(--color-text-primary);
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.weatherForecastWeek {
+    margin-top: 1.5rem;
+}
+
+.forecastDays {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecastDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.forecastDay p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.25rem 0;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 960px) {
+    .weatherCard {
+        padding: 1.25rem;
+    }
+    .weatherCardTitle h3 {
+        font-size: 1.1rem;
+    }
+    .weatherCondition {
+        gap: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .weatherCard {
+        border-radius: .75rem;
+        padding: 0.75rem;
+    }
+
+    .weatherForecast {
+        margin-top: 0.3rem;
+    }
+
+    .weatherForecastWeek {
+        margin-top: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .weatherCardTitle h3 {
+        font-size: 1rem;
+    }
+}

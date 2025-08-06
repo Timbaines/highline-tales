@@ -1,71 +1,79 @@
-import {WiDaySunny, WiDayCloudy, WiDayThunderstorm, WiDayWindy} from 'react-icons/wi';
+import { getWeatherIcon } from '@/utils/weatherUtils.jsx';
+import useWeatherData from '@/hooks/useWeatherData';
+import { LOCATION } from '@/data/weatherMockData';
 
 /***** MODULE STYLES *****/
-import styles from './WeatherCard.module.css';
+import styles from '@/components/ui/WeatherCard.module.css';
 
 export default function WeatherCard() {
+    const { forecast, loading, error } = useWeatherData();
+
+    if (loading) return (
+        <div className={styles.weatherCard}>
+            <div className={styles.weatherCardTitle}>
+                <h3>Loading weather data...</h3>
+            </div>
+        </div>
+    );
+
+    if (error && !forecast.length) return (
+        <div className={styles.weatherCard}>
+            <div className={styles.weatherCardTitle}>
+                <h3>Error: {error}</h3>
+            </div>
+        </div>
+    );
+
+    if (forecast.length === 0) return (
+        <div className={styles.weatherCard}>
+            <div className={styles.weatherCardTitle}>
+                <h3>No forecast data available</h3>
+            </div>
+        </div>
+    );
+
+    // LIST FIRST DAY OF FORECAST AS CURRENT DAY
+    const currentDay = forecast[0];
+    // LIST REMAINING 4 DAYS OF FORECAST
+    const weekForecast = forecast.slice(1);
+
     return (
         <div className={styles.weatherCard}>
-            <div className={styles.weatherCardHeader}>
-                <h4>Today's Weather</h4>
+            <div className={styles.weatherCardTitle}>
+                <h3>{LOCATION.name}</h3>
             </div>
+
+            {/* TODAY'S FORECAST */}
             <div className={styles.weatherForecast}>
-                <div className={styles.weatherCondition}>
-                    <WiDayCloudy
-                        size={70}
-                    />
-                    <p>Cloudy</p>
-                </div>
                 <div className={styles.weatherTemp}>
-                    <p>88°F</p>
+                    <p>{currentDay.currentTemp}°F</p>
+                </div>
+                <div className={styles.weatherCondition}>
+                    <div className={styles.range}>
+                        {getWeatherIcon(currentDay.weatherIcon)}
+                        <p>{currentDay.weatherDescription}</p>
+                    </div>
+                    <div>
+                        <div className={styles.range}>
+                            <p>H: <span>{currentDay.highTemp}°F</span></p>
+                            <p>L: <span>{currentDay.lowTemp}°F</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            {/* REMAINING 4-DAY FORECAST */}
             <div className={styles.weatherForecastWeek}>
                 <div className={styles.forecastDays}>
-                    <div className={styles.forecastDay}>
-                        <p>Mon</p>
-                        <WiDaySunny
-                        size={25}
-                        />
-                        <p>92°F</p>
-                    </div>
-                    <div className={styles.forecastDay}>
-                        <p>Tue</p>
-                        <WiDayThunderstorm
-                            size={25}
-                        />
-                        <p>88°F</p>
-                    </div>
-                    <div className={styles.forecastDay}>
-                        <p>Wed</p>
-                        <WiDaySunny
-                            size={25}
-                        />
-                        <p>85°F</p>
-                    </div>
-                    <div className={styles.forecastDay}>
-                        <p>Thu</p>
-                        <WiDaySunny
-                            size={25}
-                        />
-                        <p>85°F</p>
-                    </div>
-                    <div className={styles.forecastDay}>
-                        <p>Fri</p>
-                        <WiDaySunny
-                            size={25}
-                        />
-                        <p>87°F</p>
-                    </div>
-                    <div className={styles.forecastDay}>
-                        <p>Sat</p>
-                        <WiDayWindy
-                            size={25}
-                        />
-                        <p>86°F</p>
-                    </div>
+                    {weekForecast.map((day, index) => (
+                        <div key={index} className={styles.forecastDay}>
+                            <p>{day.day}</p>
+                            {getWeatherIcon(day.weatherIcon, 25)}
+                            <p>{day.currentTemp}°F</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
-    )
+    );
 }

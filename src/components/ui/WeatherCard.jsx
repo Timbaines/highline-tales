@@ -47,10 +47,10 @@ export default function WeatherCard() {
             <div className={styles.weatherForecast}>
                 <div className={styles.weatherTemp}>
                     <p>{currentDay.currentTemp}°F</p>
+                    {getWeatherIcon(currentDay.weatherIcon)}
                 </div>
                 <div className={styles.weatherCondition}>
                     <div className={styles.range}>
-                        {getWeatherIcon(currentDay.weatherIcon)}
                         <p>{currentDay.weatherDescription}</p>
                     </div>
                     <div>

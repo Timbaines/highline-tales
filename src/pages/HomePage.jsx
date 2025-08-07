@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import WeatherCard from '@/components/ui/WeatherCard.jsx';
-import ActivityList from '@/components/activity/ActivityList';
+import WeatherCard from '@/components/ui/cards/WeatherCard.jsx';
+import ImageCard from '@/components/ui/cards/ImageCard';
 import HomePageLayout from '@/layouts/HomePageLayout.jsx';
-import Button from '@/components/ui/Button.jsx';
-import Card from "@/components/Card.jsx";
+import Button from '@/components/ui/buttons/Button.jsx';
+import InfoCard from "@/components/ui/cards/InfoCard.jsx";
+import { activitiesData } from '@/data/activitiesData';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/HomePage.module.css';
@@ -38,8 +39,18 @@ export default function HomePage() {
             <section>
                 <h2 className={styles.mobileHeading}>Activities</h2>
                 <HomePageLayout
-                    leftGrid={<ActivityList />}
-                    rightGrid={<Card />}
+                    leftGrid={
+                        <div className={styles.homeActivities}>
+                            {activitiesData.map(activity => (
+                                <ImageCard
+                                    key={activity.id}
+                                    item={activity}
+                                    contentType="activity"
+                                />
+                            ))}
+                        </div>
+                    }
+                    rightGrid={<InfoCard />}
                 />
             </section>
         </>

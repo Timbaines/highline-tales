@@ -1,0 +1,49 @@
+.subpageHeader {
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+}
+
+.headerNavContainer {
+    position: fixed;
+    top: .5rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.subpageHeaderTitle {
+    position: absolute;
+    color:  var(--color-white);
+    top: 65%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.subpageHeaderTitle p {
+    font-size: var(--font-size-xs);
+
+    line-height: var(--line-height-none);
+    margin: var(--margin-none);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.25rem;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 768px) {
+    .headerNavContainer {
+        padding: 0 .75rem;
+    }
+}

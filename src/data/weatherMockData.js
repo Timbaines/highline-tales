@@ -11,5 +11,5 @@ export const weatherPatterns = [
 export const LOCATION = {
     name: "Glacier National Park, MT.",
     lat: 48.7561,
-    lon: 113.7797
+    lon: -113.7797
 };

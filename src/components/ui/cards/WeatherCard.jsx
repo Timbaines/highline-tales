@@ -1,9 +1,9 @@
 import { getWeatherIcon } from '@/utils/weatherUtils.jsx';
-import useWeatherData from '@/hooks/useWeatherData';
-import { LOCATION } from '@/data/weatherMockData';
+import useWeatherData from '@/hooks/useWeatherData.js';
+import { LOCATION } from '@/data/weatherMockData.js';
 
 /***** MODULE STYLES *****/
-import styles from '@/components/ui/WeatherCard.module.css';
+import styles from '@/components/ui/cards/WeatherCard.module.css';
 
 export default function WeatherCard() {
     const { forecast, loading, error } = useWeatherData();

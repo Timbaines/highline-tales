@@ -1,14 +1,14 @@
 import React from 'react';
-import { hikingGearData } from "@/data/hikingGearData.js";
+import { essentialsData } from "@/data/essentialsData.js";
 
 /***** MODULE STYLES *****/
-import styles from '@/components/gear/GearList.module.css';
+import styles from '@/components/essentials/EssentialsList.module.css';
 
 export default function HikingGearList() {
     return (
         <>
             <div className={styles.hikingGrid}>
-                {hikingGearData.map(hikingItem => {
+                {essentialsData.map(hikingItem => {
                     const IconComponent = hikingItem.icon;
                     return (
                         <div key={hikingItem.id} className={styles.item}>

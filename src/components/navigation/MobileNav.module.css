@@ -27,7 +27,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--color-bg-opacity-primary);
+    background: var(--color-bg-rgba-primary);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 99;
@@ -59,7 +59,7 @@
 }
 
 .mobileNavItem a:hover {
-    color: var(--color-link-hover);
+    color: var(--color-link-primary-hover);
 }
 
 .activeLink {

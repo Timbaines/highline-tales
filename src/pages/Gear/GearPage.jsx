@@ -5,7 +5,8 @@ import styles from '@/pages/Gear/GearPage.module.css';
 
 export default function GearPage() {
     return (
-        <div className={styles.gearContainer}>
+        <div>
+            <h2>Hiking Checklist</h2>
             <GearList />
         </div>
     )

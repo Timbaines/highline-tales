@@ -1,5 +1,7 @@
 .gearContainer {
     margin-bottom: 2rem;
+    width: 100%;
+
 }
 
 @media (max-width: 960px) {

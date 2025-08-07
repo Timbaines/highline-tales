@@ -4,24 +4,22 @@
     grid-template-columns: 1.25fr 1fr;
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas:
-       "left-bottom right-bottom";
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+       "left-col right-col";
 }
 
 .leftGrid {
     grid-column: 1 / -1;
-    grid-area: left-bottom;
+    grid-area: left-col;
     display: flex;
     flex-direction: column;
-    min-height: 0;
+    justify-content: center;
 }
 
 .rightGrid {
-    grid-area: right-bottom;
+    grid-area: right-col;
     display: flex;
     flex-direction: column;
-    min-height: 0;
+    justify-content: center;
 }
 
 
@@ -31,14 +29,8 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         grid-template-areas:
-            "left-bottom"
-            "right-bottom";
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .gridContainer {
-        gap: 1rem;
+            "left-col"
+            "right-col";
+        gap: 0;
     }
 }

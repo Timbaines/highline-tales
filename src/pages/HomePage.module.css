@@ -1,15 +1,13 @@
 .homePageContainer {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
-    gap: 1rem;
-    padding-bottom: 2rem;
+
 }
 
 .homePageContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 2rem 0;
 }
 
 .homePageForecast {
@@ -18,7 +16,7 @@
     justify-content: center;
 }
 
-.homeTitle {
+.mobileHeading {
     display: none;
 }
 
@@ -29,13 +27,14 @@
         margin-bottom: 0
     }
 
-    .homeTitle {
-        display: block;
+    .homePageContent {
+        margin-bottom: 4rem;
     }
 }
 
 @media (max-width: 768px) {
-    .homePageContent {
-        margin: 0 0 1rem 0;
+    .mobileHeading {
+        display: block;
+        margin-right: 1.5rem;
     }
 }

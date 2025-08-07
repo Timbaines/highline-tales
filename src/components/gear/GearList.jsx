@@ -7,7 +7,6 @@ import styles from '@/components/gear/GearList.module.css';
 export default function HikingGearList() {
     return (
         <>
-            <h2>Checklist</h2>
             <div className={styles.hikingGrid}>
                 {hikingGearData.map(hikingItem => {
                     const IconComponent = hikingItem.icon;

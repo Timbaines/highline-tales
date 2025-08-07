@@ -17,8 +17,8 @@ import {
     FaBinoculars
 } from 'react-icons/fa';
 
-export const hikingGearData = [
-    { id: 1, name: "2L Water Bottles", icon: FaWater },
+export const essentialsData = [
+    { id: 1, name: "Water Bottles", icon: FaWater },
     { id: 2, name: "Trail Lunch", icon: FaUtensils },
     { id: 3, name: "Hiking Boots", icon: FaHiking },
     { id: 4, name: "Hiking Socks", icon: FaSocks },

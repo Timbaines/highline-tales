@@ -5,7 +5,7 @@ export default function Logo() {
     const { isDarkMode } = useTheme();
 
     const fillColor = isDarkMode ? "#FFFFFF" : "#0F0F0F";
-    const strokeColor = isDarkMode ? "#3DCF8E" : "#0F0F0F";
+    const strokeColor = isDarkMode ? "#3ECF8E" : "#0F0F0F";
 
     return (
         <>

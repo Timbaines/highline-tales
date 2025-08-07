@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+}
+
+.default {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.fluid {
+    width: 100%;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

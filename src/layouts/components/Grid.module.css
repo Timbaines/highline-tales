@@ -1,0 +1,68 @@
+.grid {
+    display: grid;
+    width: 100%;
+}
+
+.default {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.twoColumn {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.asymmetric {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 1rem;
+}
+
+.homePageGrid {
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas: "left-col right-col";
+    gap: 1rem;
+}
+
+.leftCol {
+    grid-area: left-col;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightCol {
+    grid-area: right-col;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.activityGrid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas: "left-col right-col";
+    gap: 2rem;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 960px) {
+    .twoColumn, .asymmetric, .homePageGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+      "left-col"
+      "right-col";
+        gap: 0;
+    }
+
+    .activityGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+      "left-col"
+      "right-col";
+        gap: 1.5rem;
+    }
+
+}

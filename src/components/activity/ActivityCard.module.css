@@ -7,6 +7,7 @@
 
 .activityCard:hover {
     border-color: var(--color-border-hover);
+    box-shadow: 0 0 15px 0 rgba(17, 12, 46, 0.15);
 }
 
 .activityCardInner {
@@ -77,8 +78,6 @@
     width: 14px;
     height: 14px;
     flex-shrink: 0;
-    display: inline-flex;
-    vertical-align: middle;
 }
 
 .activityCardDescription {
@@ -108,7 +107,7 @@
 @media (max-width: 960px) {
     .activityCard {
         border-radius: .75rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
     }
 
     .activityCardImageContainer {
@@ -198,10 +197,6 @@
     .icon {
         width: 10px;
         height: 10px;
-    }
-
-    .activityCardActions {
-        margin-top: 0.5rem;
     }
 
     .activityCardLink {

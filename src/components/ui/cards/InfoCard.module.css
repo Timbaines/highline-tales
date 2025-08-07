@@ -1,0 +1,175 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+.topCard,
+.bottomCard {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    height: calc((100% - 1rem) / 2);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.topCard {
+    background-image: url('/mtn-vector-2.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.topCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-card-overlay);
+    z-index: 1;
+}
+
+.topCard .card {
+    position: relative;
+    z-index: 2;
+}
+
+.topCard:hover,
+.bottomCard:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: 0 0 15px 0 rgba(17, 12, 46, 0.1);
+}
+
+.card {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cardContent {
+    margin-top: auto;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cardDetails{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cardDescription {
+    color: var(--color-text-secondary);
+    margin: 1rem 0;
+    overflow: auto;
+}
+
+.cardActions {
+    margin-top: auto;
+}
+
+.cardLink {
+    color: var(--color-link-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 960px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .topCard,
+    .bottomCard {
+        border-radius: .75rem;
+        height: 100%;
+        min-height: 200px;
+    }
+
+    .card {
+        padding: 1.5rem 1rem;
+        height: 100%;
+    }
+
+    .cardContent {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .cardDescription {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+    }
+
+    .cardTitle {
+        font-size: 1.1rem;
+    }
+
+    .cardLink {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .topCard,
+    .bottomCard {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topCard,
+    .bottomCard {
+        border-radius: 0.5rem;
+        min-height: 150px;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .cardTitle {
+        margin: 2rem 0 0 0;
+    }
+
+    .cardDescription {
+        margin: 0.5rem 0;
+        max-height: 80px;
+    }
+
+    .cardActions {
+        margin-top: 0.5rem;
+    }
+}

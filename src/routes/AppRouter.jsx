@@ -2,10 +2,10 @@ import { createBrowserRouter, RouterProvider, ScrollRestoration
 } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
 import HomePage from '@/pages/HomePage';
-import ActivitiesPage from '@/pages/ActivitiesPage';
-import ActivityPage from '@/pages/ActivityPage';
+import ActivitiesPage from '@/pages/Activities/ActivitiesPage.jsx';
+import ActivityPage from '@/pages/Activity/ActivityPage.jsx';
 import ActivityNotFound from '@/components/activity/ActivityError.jsx'
-import GearPage from '@/pages/GearPage';
+import GearPage from '@/pages/Gear/GearPage.jsx';
 import { createSlug } from '@/utils/stringUtils';
 import { activitiesData } from '@/data/activitiesData.js';
 

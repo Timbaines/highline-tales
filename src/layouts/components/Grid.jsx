@@ -7,5 +7,4 @@ export default function Grid({ children, variant = 'default', className = ''}) {
             {children}
         </div>
     )
-}
-
+};

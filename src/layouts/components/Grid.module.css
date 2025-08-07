@@ -39,13 +39,18 @@
     justify-content: center;
 }
 
-
 .activityGrid {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: "left-col right-col";
     gap: 2rem;
 }
+
+.gearGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {

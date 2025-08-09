@@ -1,25 +1,27 @@
-import { Link } from "react-router-dom";
-import WeatherCard from '@/components/ui/cards/WeatherCard.jsx';
+import { Link } from 'react-router-dom';
+import WeatherCard from '@/components/ui/cards/WeatherCard';
 import ImageCard from '@/components/ui/cards/ImageCard';
-import HomePageLayout from '@/layouts/HomePageLayout.jsx';
-import Button from '@/components/ui/buttons/Button.jsx';
-import InfoCard from "@/components/ui/cards/InfoCard.jsx";
+import { Grid } from '@/layouts/components';
+import Button from '@/components/ui/buttons/Button';
+import InfoCard from '@/components/ui/cards/InfoCard';
 import { activitiesData } from '@/data/activitiesData';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/HomePage.module.css';
+import gridStyles from '@/layouts/components/Grid.module.css';
+
 
 export default function HomePage() {
     return (
         <>
             <section>
-                <HomePageLayout
-                    leftGrid={
+                <Grid variant="homePageGrid">
+                    <div className={gridStyles.leftCol}>
                         <div className={styles.homePageContent}>
                             <h2>Destination</h2>
                             <p>This years upcoming vacation destination is Montana, where Sarah and I will be staying in Whitefish and exploring the Glacier National Park. Spanning over more than 1 million acres, Glacier is the crown jewel of a vast protected wilderness shared by the U.S. and Canada.</p>
                             <p>With more than 700 miles of hiking trails, the park offers endless opportunities for adventure, from scenic hikes and boating on alpine lakes to wildlife viewing and relaxing drives.</p>
-                            <div>
+                            <div className={styles.row}>
                                 <Link to="/activities">
                                     <Button type="primary">
                                         View Activities
@@ -27,19 +29,19 @@ export default function HomePage() {
                                 </Link>
                             </div>
                         </div>
-                    }
-                    rightGrid={
-                        <div className={styles.homePageForecast}>
+                    </div>
+                    <div className={gridStyles.rightCol}>
+                        <div>
                             <WeatherCard />
                         </div>
-                    }
-                />
+                    </div>
+                </Grid>
             </section>
 
             <section>
                 <h2 className={styles.mobileHeading}>Activities</h2>
-                <HomePageLayout
-                    leftGrid={
+                <Grid variant="homePageGrid">
+                    <div className={gridStyles.leftCol}>
                         <div className={styles.homeActivities}>
                             {activitiesData.map(activity => (
                                 <ImageCard
@@ -49,9 +51,11 @@ export default function HomePage() {
                                 />
                             ))}
                         </div>
-                    }
-                    rightGrid={<InfoCard />}
-                />
+                    </div>
+                    <div className={gridStyles.rightCol}>
+                        <InfoCard />
+                    </div>
+                </Grid>
             </section>
         </>
     );

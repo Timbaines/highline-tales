@@ -1,8 +1,9 @@
-.homePageContent,
-.homePageForecast {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.homePageContent {
+    margin: 4rem 0;
+}
+
+.row {
+    margin: 1.75rem 0;
 }
 
 .mobileHeading {
@@ -15,11 +16,10 @@
     gap: 1rem;
 }
 
-
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
     .homePageContent {
-        margin-bottom: 4rem;
+        margin: 2rem 0 4rem 0;
     }
     .homeActivities {
         gap: 0;

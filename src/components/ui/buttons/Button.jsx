@@ -1,5 +1,5 @@
 /***** MODULE STYLES *****/
-import styles from '@/components/ui/Button.module.css';
+import styles from '@/components/ui/buttons/Button.module.css';
 
 export default function Button({ children, onClick, type, size }) {
     return (

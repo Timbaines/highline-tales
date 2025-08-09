@@ -10,7 +10,6 @@
     cursor: pointer;
 }
 
-
 .primary {
     background: var(--color-bg-btn-primary);
     color: var(--color-text-btn-primary);
@@ -21,4 +20,3 @@
     background: var(--color-bg-btn-primary-hover);
     border-color: var(--color-bg-btn-primary-hover);
 }
-

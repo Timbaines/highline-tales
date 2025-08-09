@@ -14,7 +14,7 @@ const ThemeToggle = ({ className, ...props }) => {
             className={`${styles.themeToggle} ${className || ''}`}
             {...props}
         >
-            {isDarkMode ? <FiSun size={14} className={styles.toggleSun} /> : <FiMoon size={14} />}
+            {isDarkMode ? <FiSun size={14} /> : <FiMoon size={14} />}
         </button>
     )
 }

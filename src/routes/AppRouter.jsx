@@ -9,8 +9,9 @@ import ActivityPage from '@/pages/activities/ActivityPage';
 import ActivityPost from '@/pages/activities/ActivityPost';
 import EssentialsPage from '@/pages/essentials/EssentialsPage';
 import BlogPage from '@/pages/blog/BlogPage';
-import BlogPostPage from '@/pages/blog/BlogPostPage';
+import BlogPost from '@/pages/blog/BlogPost.jsx';
 
+/***** SERVICES *****/
 import { getActivityBySlug } from '@/services/activitiesService';
 import { getPostBySlug } from '@/services/blogService';
 
@@ -18,7 +19,6 @@ import { getPostBySlug } from '@/services/blogService';
 import ActivityNotFound from '@/components/activities/ActivityError';
 import BlogPostNotFound from '@/components/blog/BlogPostError';
 
-/***** DATA *****/
 
 const activityLoader = ({ params }) => {
     const activity = getActivityBySlug(params.slug);
@@ -32,6 +32,8 @@ const blogPostLoader = ({ params }) => {
     return { post };
 };
 
+import RouteErrorElement from '@/components/errors/RouteErrorElement';
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -41,6 +43,7 @@ const router = createBrowserRouter([
                 <ScrollRestoration />
             </>
         ),
+        errorElement: <RouteErrorElement />,
         children: [
             {
                 index: true,
@@ -66,7 +69,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'blog/:slug',
-                element: <BlogPostPage />,
+                element: <BlogPost />,
                 loader: blogPostLoader,
                 errorElement: <BlogPostNotFound />
             },

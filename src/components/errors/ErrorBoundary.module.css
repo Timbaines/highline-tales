@@ -1,0 +1,25 @@
+.container {
+  margin-top: 3rem;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+}
+
+.message {
+  margin: 0 0 1rem 0;
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.devError {
+  margin-top: 1rem;
+  color: var(--color-text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}

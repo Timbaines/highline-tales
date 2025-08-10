@@ -1,6 +1,6 @@
 import { activitiesData } from '@/data/activitiesData';
 import ImageCardList from '@/components/ui/cards/ImageCardList';
-import Grid from '@/layouts/components/Grid.jsx';
+import Grid from '@/layouts/components/Grid';
 
 
 /***** MODULE STYLES *****/
@@ -10,7 +10,7 @@ export default function ActivityPage() {
     return (
         <>
             <h2>Activities</h2>
-            <Grid variant="twoColumn" className={styles.activitiesMargin}>
+            <Grid variant="twoColumn" className={styles.activityMargin}>
                 <ImageCardList
                     items={activitiesData}
                     contentType="activity"

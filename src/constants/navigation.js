@@ -10,9 +10,14 @@ export const navItems = [
         href: "/activities"
     },
     {
-        id: "gear",
-        label: "Gear",
-        href: "/gear"
+        id: "essentials",
+        label: "Trail Gear",
+        href: "/hiking-checklist"
+    },
+    {
+        id: "blog",
+        label: "Travel Log",
+        href: "/blog"
     }
 ];
 

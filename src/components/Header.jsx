@@ -7,7 +7,7 @@ export default function Header() {
 
     const headerStyle = {
         backgroundImage: `var(--color-gradient-primary), url(/mtn-ht-banner.webp)`,
-        minHeight: '50vh',
+        height: '50vh',
     }
 
     return (

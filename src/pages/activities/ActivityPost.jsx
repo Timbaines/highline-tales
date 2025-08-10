@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { useLoaderData, Link, Navigate } from 'react-router-dom';
+import { useLoaderData, Navigate } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import { IoIosArrowRoundBack } from 'react-icons/io';
 import { Grid } from '@/layouts/components';
-import DOMPurify from 'dompurify';
 import { getDifficultyColor } from '@/utils/difficulty';
+import BackLinkNav from "@/components/common/BackLinkNav";
+import DOMPurify from 'dompurify';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/activities/ActivityPost.module.css';
@@ -100,10 +100,7 @@ export default function ActivityPost() {
                     </Grid>
 
                     <nav className={styles.activityNav}>
-                        <Link to="/activities" className={styles.activityBackLink}>
-                            <IoIosArrowRoundBack className={styles.activityBackButton} size={30} />
-                            Back to Activities Page
-                        </Link>
+                        <BackLinkNav to="/activities">Back to Activities Page</BackLinkNav>
                     </nav>
                 </div>
             </Grid>

@@ -74,18 +74,8 @@
 /***** BLOG CONTENT CONTAINER | END *****/
 .postNav {
     margin-top: 3rem;
-    padding-top: 3rem;
+    padding: 3rem 0;
     border-top: 1px solid var(--color-border);
-}
-
-.backLink {
-    display: inline-flex;
-    align-items: center;
-    transition: color 0.2s ease;
-}
-
-.backIcon {
-    margin-right: 0.25rem;
 }
 
 /***** MEDIA QUERIES *****/

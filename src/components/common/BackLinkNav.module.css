@@ -1,0 +1,10 @@
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backIcon {
+  margin-right: 0.25rem;
+}

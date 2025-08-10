@@ -5,9 +5,9 @@ import { parseContent } from '@/utils/contentParserUtils.jsx';
 
 
 /***** MODULE STYLES *****/
-import styles from '@/pages/blog/BlogPostPage.module.css';
+import styles from '@/pages/blog/BlogPost.module.css';
 
-export default function BlogPostPage() {
+export default function BlogPost() {
     const { post } = useLoaderData();
 
     return (
@@ -32,7 +32,7 @@ export default function BlogPostPage() {
                 </article>
 
                 <nav className={styles.postNav}>
-                    <BackLinkNav to="/blog" className={styles.backLink}>Back to Blog Page</BackLinkNav>
+                    <BackLinkNav to="/blog">Back to Blog Page</BackLinkNav>
                 </nav>
             </div>
     );

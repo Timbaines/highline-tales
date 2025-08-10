@@ -6,9 +6,11 @@ import styles from '@/pages/essentials/EssentialsPage.module.css';
 
 export default function EssentialsPage() {
     return (
-        <Grid variant="default" className={styles.gearMargin}>
-            <h2>Hiking Checklist</h2>
-            <GearList />
-        </Grid>
+        <>
+            <h2>Trail Gear</h2>
+            <Grid variant="default" className={styles.gearMargin}>
+                <GearList />
+            </Grid>
+        </>
     )
 }

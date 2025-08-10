@@ -14,7 +14,9 @@ import {
     FaMobileAlt,
     FaBatteryFull,
     FaCamera,
-    FaBinoculars
+    FaBinoculars,
+    FaBook,
+    FaToiletPaper
 } from 'react-icons/fa';
 
 export const essentialsData = [
@@ -34,4 +36,6 @@ export const essentialsData = [
     { id: 14, name: "Power Bank", icon: FaBatteryFull },
     { id: 16, name: "Camera", icon: FaCamera },
     { id: 17, name: "Binoculars", icon: FaBinoculars },
+    { id: 18, name: "Field Notes", icon: FaBook },
+    { id: 19, name: "Toilet Paper", icon: FaToiletPaper },
 ];

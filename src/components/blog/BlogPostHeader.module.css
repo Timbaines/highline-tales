@@ -1,0 +1,24 @@
+.blogPostHeader {
+    background-color: var(--color-bg-primary);
+    padding: 2rem 0;
+    position: relative;
+}
+
+.headerNavContainer {
+    position: fixed;
+    top: .5rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 768px) {
+    .headerNavContainer {
+        padding: 0 .75rem;
+    }
+}

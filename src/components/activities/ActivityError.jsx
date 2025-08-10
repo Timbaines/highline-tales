@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+
+/***** MODULE STYLES *****/
 import styles from '@/components/errors/ErrorBoundary.module.css';
 
 export default function ActivityError() {
@@ -11,4 +13,4 @@ export default function ActivityError() {
             </div>
         </div>
     )
-}
+};

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+/***** MODULE STYLES *****/
 import styles from '@/components/errors/ErrorBoundary.module.css';
 
 export default class GlobalErrorBoundary extends React.Component {
@@ -35,4 +37,4 @@ export default class GlobalErrorBoundary extends React.Component {
 
     return this.props.children;
   }
-}
+};

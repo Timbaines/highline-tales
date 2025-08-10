@@ -1,6 +1,8 @@
 import { useRouteError } from "react-router-dom";
-import styles from '@/components/errors/ErrorBoundary.module.css';
 import BackLinkNav from '@/components/common/BackLinkNav';
+
+/***** MODULE STYLES *****/
+import styles from '@/components/errors/ErrorBoundary.module.css';
 
 export default function BlogPostError() {
     const error = useRouteError();
@@ -17,4 +19,4 @@ export default function BlogPostError() {
             )}
         </div>
     );
-}
+};

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLoaderData, Navigate } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { Grid } from '@/layouts/components';
 import { getDifficultyColor } from '@/utils/difficulty';
@@ -13,11 +13,7 @@ import gridStyles from '@/layouts/components/Grid.module.css';
 export default function ActivityPost() {
     const { activity } = useLoaderData();
 
-    if (!activity) {
-        return <Navigate to="/activities" replace />
-    }
-
-
+    // GET DIFFICULTY COLOR
     const difficultyColor = getDifficultyColor(activity.difficulty);
     
     // MAP IMAGE FALLBACK

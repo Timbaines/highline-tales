@@ -1,11 +1,10 @@
 import { useLocation, useMatch } from 'react-router-dom';
-import PrimaryNav from '@/components/navigation/PrimaryNav.jsx';
-import { createSlug } from '@/utils/stringUtils.js';
-import { activitiesData } from '@/data/activitiesData.js';
-
+import PrimaryNav from '@/components/navigation/PrimaryNav';
+import { activitiesData } from '@/data/activitiesData';
+import { createSlug } from '@/utils/stringUtils';
 
 /***** MODULE STYLES *****/
-import styles from '../components/SubPageHeader.module.css';
+import styles from '@/components/SubpageHeader.module.css';
 
 export default function SubpageHeader() {
     const location = useLocation();
@@ -22,7 +21,7 @@ export default function SubpageHeader() {
                 return {
                     backgroundImage: '/ht-banner2.webp',
                     subtitle: 'GLACIER NATIONAL PARK',
-                    title: 'Trail Gear Essentials',
+                    title: 'Hiking Essentials',
                     height: '45vh'
                 };
             case '/activities':
@@ -36,7 +35,7 @@ export default function SubpageHeader() {
                 return {
                     backgroundImage: '/highline-trail-hero-banner.webp',
                     subtitle: 'GLACIER NATIONAL PARK',
-                    title: 'Experiencing Glacier',
+                    title: 'Trailing Tales',
                     height: '45vh'
                 };
             default:

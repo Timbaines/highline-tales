@@ -1,6 +1,6 @@
 .subpageHeader {
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     padding: 2rem 1.5rem;
     position: relative;
 }
@@ -20,12 +20,11 @@
 .subpageHeaderTitle {
     position: absolute;
     color:  var(--color-white);
-    top: 65%;
+    top: 70%;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: left;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;

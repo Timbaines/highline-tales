@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import { createSlug } from '@/utils/stringUtils.js';
-import LikeButton from '@/components/ui/buttons/LikeButton.jsx';
 
 /***** MODULE STYLES *****/
 import styles from '@/components/ui/cards/ImageCard.module.css';
+import { createSlug } from '@/utils/stringUtils';
+import { getDifficultyColor } from '@/utils/difficulty';
 
 export default function ContentCard({ item, contentType }) {
     const getPath = () => {
@@ -27,17 +27,7 @@ export default function ContentCard({ item, contentType }) {
     };
 
     // Handle difficulty color for activities
-    const getDifficultyColor = (difficulty) => {
-        if (!difficulty) return '#3DCF8E';
-
-        const difficultyLevel = difficulty.toLowerCase().trim();
-        switch (difficultyLevel) {
-            case 'easy': return '#3DCF8E';
-            case 'moderate': return '#FFBF00';
-            case 'hard': return '#F75F5F';
-            default: return '#3DCF8E';
-        }
-    };
+    // Color is computed by shared util getDifficultyColor(difficulty)
 
     return (
         <article className={styles.activityCard}>
@@ -57,24 +47,24 @@ export default function ContentCard({ item, contentType }) {
                             </Link>
                         </h3>
                         <span className={styles.activityDate}>
-              <FaCalendarAlt className={styles.icon} /> {item.date}
-            </span>
+                            <FaCalendarAlt className={styles.icon}
+                            />
+                            {item.date}
+                        </span>
                     </div>
-
-                    {/* Conditionally render activity stats */}
                     {contentType === 'activity' && (
                         <p className={styles.activityCardStats}>
-              <span className={styles.statItem}>
-                <FaTachometerAlt
-                    className={styles.icon}
-                    style={{color: getDifficultyColor(item.difficulty)}}
-                />
-                <span>{item.difficulty}</span>
-              </span>
+                      <span className={styles.statItem}>
+                        <FaTachometerAlt
+                            className={styles.icon}
+                            style={{color: getDifficultyColor(item.difficulty)}}
+                        />
+                        <span>{item.difficulty}</span>
+                      </span>
                             <span className={styles.statItem}>
-                <FaMapMarkerAlt className={styles.icon} />
-                <span>{item.miles} miles</span>
-              </span>
+                                <FaMapMarkerAlt className={styles.icon} />
+                                <span>{item.miles} miles</span>
+                            </span>
                         </p>
                     )}
 
@@ -89,9 +79,6 @@ export default function ContentCard({ item, contentType }) {
                         >
                             Read More →
                         </Link>
-
-                        {/* Only show like button for activities */}
-                        {contentType === 'activity' && <LikeButton />}
                     </div>
                 </div>
             </div>

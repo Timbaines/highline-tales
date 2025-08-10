@@ -11,38 +11,24 @@ import EssentialsPage from '@/pages/essentials/EssentialsPage';
 import BlogPage from '@/pages/blog/BlogPage';
 import BlogPostPage from '@/pages/blog/BlogPostPage';
 
+import { getActivityBySlug } from '@/services/activitiesService';
+import { getPostBySlug } from '@/services/blogService';
+
 /***** ERROR PAGES *****/
 import ActivityNotFound from '@/components/activities/ActivityError';
 import BlogPostNotFound from '@/components/blog/BlogPostError';
 
-/***** UTILS* ****/
-import { createSlug } from '@/utils/stringUtils';
-
 /***** DATA *****/
-import { activitiesData } from '@/data/activitiesData';
-import { blogData } from '@/data/blogData';
 
 const activityLoader = ({ params }) => {
-    const { slug } = params;
-    const activity = activitiesData.find(
-        activity => createSlug(activity.title) === slug
-    );
-
-    if (!activity) {
-        throw new Response("activities not found", { status: 404 });
-    }
-
+    const activity = getActivityBySlug(params.slug);
+    if (!activity) throw new Response('Activity not found', { status: 404 });
     return { activity };
-};
+    };
 
 const blogPostLoader = ({ params }) => {
-    const { slug } = params;
-    const post = blogData.find(post => post.slug === slug);
-
-    if (!post) {
-        throw new Response("blog post not found", { status: 404 });
-    }
-
+    const post = getPostBySlug(params.slug);
+    if (!post) throw new Response('Blog post not found', { status: 404 });
     return { post };
 };
 
@@ -83,7 +69,8 @@ const router = createBrowserRouter([
                 element: <BlogPostPage />,
                 loader: blogPostLoader,
                 errorElement: <BlogPostNotFound />
-            }
+            },
+            { path: '*', element: <div style={{ padding: '2rem 0' }}><h2>Page Not Found</h2></div> }
         ]
     }
 ]);

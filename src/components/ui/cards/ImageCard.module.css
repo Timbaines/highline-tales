@@ -16,7 +16,7 @@
 
 .activityCardImageContainer {
     width: 180px;
-    height: 160px;
+    height: auto;
     border-radius: 0.5rem;
     margin: 1rem;
     overflow: hidden;
@@ -83,25 +83,24 @@
 .activityCardDescription {
     color: var(--color-text-secondary);
     flex-grow: 1;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     overflow: hidden;
 }
 
 .activityCardActions {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: auto;
 }
 
 .activityCardLink {
-    color: var(--color-link-secondary);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.2s ease;
     user-select: none;
 }
+
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
@@ -110,10 +109,25 @@
         margin-bottom: 1rem;
     }
 
+    .activityCardInner {
+        align-items: stretch;
+    }
+
     .activityCardImageContainer {
-        width: 140px;
-        height: auto;
-        margin: 0.75rem;
+        width: 180px;
+        margin: 0;
+        border-radius: 0;
+        position: relative;
+    }
+
+    .activityCardImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none;
     }
 
     .activityCardImage:hover {
@@ -121,7 +135,7 @@
     }
 
     .activityCardContent {
-        padding: 0.75rem 0.75rem 0.75rem 0;
+        padding: .75rem;
     }
 
     .activityCardHeader {
@@ -138,7 +152,11 @@
 
     .activityCardStats {
         font-size: 0.8125rem;
-        margin: 0.375rem 0 0 0;
+        margin: 0.375rem 0 1rem 0;
+    }
+
+    .activityCardActions {
+        margin-top: auto;
     }
 
     .icon {
@@ -147,14 +165,15 @@
     }
 
     .activityCardLink {
+        color: var(--color-link-primary);
         font-size: 0.875rem;
     }
 }
 
 @media (max-width: 768px) {
     .activityCardImageContainer {
-        width: 100px;
-        height: 100px;
+        width: 125px;
+        height: 125px;
     }
 
     .activityCardDescription {
@@ -162,7 +181,7 @@
     }
 
     .activityCardStats {
-        margin: 0.25rem 0 0 0;
+        margin: 0.25rem 0 1rem 0;
     }
 }
 
@@ -172,8 +191,8 @@
     }
 
     .activityCardImageContainer {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .activityCardTitle {
@@ -186,7 +205,7 @@
 
     .activityCardStats {
         font-size: 0.75rem;
-        margin: 0.25rem 0;
+        margin: 0.25rem 0 0.25rem 0;
     }
 
     .statItem {

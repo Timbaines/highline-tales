@@ -1,144 +1,84 @@
-import { useState, useEffect } from 'react';
-import { weatherPatterns, LOCATION } from '@/data/weatherMockData.js';
+import { useEffect, useRef, useState } from 'react';
+import { getFiveDayForecast } from '@/services/weather/weatherService.js';
+import { LOCATION, createMockForecastData } from '@/data/weatherMockData.js';
 
-export default function useWeatherData() {
-    const [forecast, setForecast] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error] = useState(null);
+// Transform OpenWeather 3-hourly data into a simple 5-day daily summary the card expects
+function mapApiToForecast(data) {
+  // Safe-guards
+  if (!data || !Array.isArray(data.list)) return [];
 
-    const { lat, lon } = LOCATION;
-    const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+  // Group entries by date (YYYY-MM-DD) using local time from dt_txt
+  const byDate = new Map();
+  for (const item of data.list) {
+    const dateStr = (item.dt_txt || '').slice(0, 10);
+    if (!byDate.has(dateStr)) byDate.set(dateStr, []);
+    byDate.get(dateStr).push(item);
+  }
 
-    // FORMAT DATE TO DAY OF THE WEEK
-    const formatDay = (dateObj, format = 'short') => {
-        return dateObj.toLocaleDateString('en-US', {
-            weekday: format === 'short' ? 'short' : 'long'
-        });
+  // Build up to 5 days from today forward
+  const days = Array.from(byDate.keys()).slice(0, 5);
+
+  const forecasts = days.map((dateStr) => {
+    const entries = byDate.get(dateStr) || [];
+    // Pick a representative entry (prefer around midday ~ 12:00:00)
+    const mid = entries.find(e => /12:00:00$/.test(e.dt_txt)) || entries[Math.floor(entries.length / 2)] || entries[0];
+
+    const temps = entries.map(e => e.main?.temp).filter(t => typeof t === 'number');
+    const high = temps.length ? Math.max(...temps) : mid?.main?.temp_max ?? null;
+    const low = temps.length ? Math.min(...temps) : mid?.main?.temp_min ?? null;
+
+    const weather = mid?.weather?.[0] || {};
+    const icon = weather.icon || '01d';
+    const description = weather.description ? (weather.description[0].toUpperCase() + weather.description.slice(1)) : 'Sunny';
+
+    const currentTemp = Math.round(mid?.main?.temp ?? (high ?? low ?? 70));
+
+    // Derive day label
+    const day = new Date(dateStr + 'T00:00:00');
+    const dayLabel = day.toLocaleDateString(undefined, { weekday: 'short' });
+
+    return {
+      day: dayLabel,
+      weatherIcon: icon,
+      currentTemp,
+      highTemp: typeof high === 'number' ? Math.round(high) : currentTemp,
+      lowTemp: typeof low === 'number' ? Math.round(low) : currentTemp,
+      weatherDescription: description,
     };
+  });
 
-    // FALLBACK TO MOCK DATA IF API KEY IS MISSING OR API CALL FAILS
-    const createMockForecastData = () => {
-        const today = new Date();
+  // Ensure exactly 5 items
+  return forecasts.slice(0, 5);
+}
 
-        return Array.from({ length: 5 }, (_, i) => {
-            const date = new Date(today);
-            date.setDate(date.getDate() + i);
+export default function useWeatherData(lat = LOCATION.lat, lon = LOCATION.lon) {
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
-            const weatherPattern = weatherPatterns[i];
-            const tempVariation = Math.floor(Math.random() * 3) - 1; // -1 TO +1 DEGREES
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [forecast, setForecast] = useState([]);
+  const retryRef = useRef(() => {});
 
-            return {
-                date: date.getTime(),
-                day: formatDay(date, 'short'),
-                fullDay: formatDay(date, 'long'),
-                weatherIcon: weatherPattern.icon,
-                weatherDescription: weatherPattern.description,
-                currentTemp: Math.round(weatherPattern.temp + tempVariation),
-                highTemp: Math.round(weatherPattern.highTemp + tempVariation),
-                lowTemp: Math.round(weatherPattern.lowTemp + tempVariation)
-            };
-        });
-    };
+  const run = async () => {
+    setLoading(true);
+    try {
+      if (!API_KEY) throw new Error('Missing API key');
+      const data = await getFiveDayForecast({ lat, lon, apiKey: API_KEY });
+      const processed = mapApiToForecast(data);
+      if (!processed.length) throw new Error('No forecast entries');
+      setForecast(processed);
+      setError(null);
+    } catch (e) {
+      console.error(e);
+      setError('Unable to fetch live weather; showing sample data');
+      setForecast(createMockForecastData());
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    useEffect(() => {
-        const fetchWeatherData = async () => {
-            if (!API_KEY) {
-                console.log('API key missing, using mock data');
-                setForecast(createMockForecastData());
-                setLoading(false);
-                return;
-            }
+  useEffect(() => { run(); }, [API_KEY, lat, lon]);
+  retryRef.current = run;
 
-            try {
-                setLoading(true);
-
-                // USE THE API KEY ENDPOINT TO FETCH THE 5-DAY FORECAST
-                const response = await fetch(
-                    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`
-                );
-
-                if (!response.ok) {
-                    console.error('API Error:', response.status);
-                    // FALL BACK TO MOCK DATA IF API CALL FAILS
-                    setForecast(createMockForecastData());
-                    setLoading(false);
-                    return;
-                }
-
-                const data = await response.json();
-
-                // THE 5-DAY FORECAST DATA IS IN THE LIST PROPERTY OF THE RESPONSE
-                if (!data.list || !Array.isArray(data.list)) {
-                    console.error('Invalid data format from API');
-                    setForecast(createMockForecastData());
-                    setLoading(false);
-                    return;
-                }
-
-                // GROUP BY DAY TO GET THE 5-DAY FORECAST
-                const dailyForecasts = {};
-
-                // PROCESS THE API DATA RESPONSE
-                data.list.forEach(item => {
-
-                    const date = new Date(item.dt * 1000);
-                    const day = date.toDateString();
-
-                    // IF IT IS A NEW DAY UPDATE THE FORECAST
-                    if (!dailyForecasts[day] ||
-                        (date.getHours() >= 12 && date.getHours() <= 14)) {
-                        dailyForecasts[day] = {
-                            date: date.getTime(),
-                            day: formatDay(date, 'short'),
-                            fullDay: formatDay(date, 'long'),
-                            weatherIcon: item.weather[0].icon,
-                            weatherDescription: item.weather[0].description,
-                            currentTemp: Math.round(item.main.temp),
-                            highTemp: Math.round(item.main.temp_max),
-                            lowTemp: Math.round(item.main.temp_min)
-                        };
-                    }
-
-                    // UPDATE HIGH AND LOW TEMPS IF NEEDED
-                    if (dailyForecasts[day]) {
-                        if (item.main.temp_max > dailyForecasts[day].highTemp) {
-                            dailyForecasts[day].highTemp = Math.round(item.main.temp_max);
-                        }
-                        if (item.main.temp_min < dailyForecasts[day].lowTemp) {
-                            dailyForecasts[day].lowTemp = Math.round(item.main.temp_min);
-                        }
-                    }
-                });
-
-                // CONVERT TO AN ARRAY OF OBJECTS AND SORT BY DATE
-                let processedForecast = Object.values(dailyForecasts)
-                    .sort((a, b) => a.date - b.date);
-
-                // ENSURE WE HAVE 5 DAYS OF DATA
-                if (processedForecast.length < 5) {
-                    const mockData = createMockForecastData();
-                    // USE MOCK DATA TO FILL IN THE GAP IF NEEDED
-                    processedForecast = [
-                        ...processedForecast,
-                        ...mockData.slice(processedForecast.length)
-                    ];
-                } else if (processedForecast.length > 5) {
-                    // LIMIT TO 5 DAYS IF MORE THAN 5
-                    processedForecast = processedForecast.slice(0, 5);
-                }
-
-                setForecast(processedForecast);
-                setLoading(false);
-            } catch (err) {
-                console.error('Error fetching weather data:', err.message);
-                // FALL BACK TO MOCK DATA IF API CALL FAILS
-                setForecast(createMockForecastData());
-                setLoading(false);
-            }
-        };
-
-        fetchWeatherData();
-    }, [API_KEY, lat, lon]);
-
-    return { forecast, loading, error };
+  return { forecast, loading, error, retry: () => retryRef.current() };
 }

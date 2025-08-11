@@ -46,15 +46,26 @@
     gap: 2rem;
 }
 
-.gearGrid {
+.essentialsGrid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
+}
+
+/* New variants for more flexibility */
+.threeColumn {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.autoFit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
 
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 960px) {
-    .twoColumn, .asymmetric, .homePageGrid {
+    .twoColumn, .asymmetric, .homePageGrid, .threeColumn {
         grid-template-columns: 1fr;
         grid-template-areas:
       "left-col"
@@ -69,5 +80,4 @@
       "right-col";
         gap: 1.5rem;
     }
-
 }

@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import WeatherCard from '@/components/ui/cards/WeatherCard';
 import ImageCard from '@/components/ui/cards/ImageCard';
-import { Grid } from '@/layouts/components';
+import { Grid } from '@/components/layouts/index.js';
 import Button from '@/components/ui/buttons/Button';
 import InfoCard from '@/components/ui/cards/InfoCard';
 import { activitiesData } from '@/data/activitiesData';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/HomePage.module.css';
-import gridStyles from '@/layouts/components/Grid.module.css';
+import gridStyles from '@/components/layouts/Grid.module.css';
 
 
 export default function HomePage() {

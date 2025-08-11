@@ -33,14 +33,12 @@
 }
 
 .activityCardHeader {
-    composes: cardHeader from 'Card.module.css';
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .activityCardTitle {
-    composes: cardTitle from 'Card.module.css';
     font-size: var(--font-size-lg);
     font-weight: 500;
     margin: 0;
@@ -75,7 +73,6 @@
 }
 
 .activityCardDescription {
-    composes: cardDescription from 'Card.module.css';
     color: var(--color-text-secondary);
     flex-grow: 1;
     margin: var(--space-4) 0;
@@ -83,7 +80,6 @@
 }
 
 .activityCardActions {
-    composes: cardActions from 'Card.module.css';
     display: flex;
     align-items: center;
     margin-top: auto;
@@ -192,7 +188,7 @@
     }
 
     .activityCardStats {
-        font-size: 0.75rem;
+        font-size: var( --font-size-xs);
         margin: var(--space-1) 0 var(--space-1) 0;
     }
 

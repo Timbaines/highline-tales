@@ -4,12 +4,13 @@ import { LOCATION } from '@/data/weatherMockData';
 
 /***** MODULE STYLES *****/
 import styles from '@/components/ui/cards/WeatherCard.module.css';
+import s from '@/styles/surfaces.module.css';
 
 export default function WeatherCard() {
     const { forecast, loading, error } = useWeatherData();
 
     if (loading) return (
-        <div className={styles.weatherCard}>
+        <div className={`${s.card} ${s.radiusLg} ${styles.weatherCard}`}>
             <div className={styles.weatherCardTitle}>
                 <h3>Loading weather data...</h3>
             </div>
@@ -17,7 +18,7 @@ export default function WeatherCard() {
     );
 
     if (error && !forecast.length) return (
-        <div className={styles.weatherCard}>
+        <div className={`${s.card} ${s.radiusLg} ${styles.weatherCard}`}>
             <div className={styles.weatherCardTitle}>
                 <h3>Error: {error}</h3>
             </div>
@@ -25,7 +26,7 @@ export default function WeatherCard() {
     );
 
     if (forecast.length === 0) return (
-        <div className={styles.weatherCard}>
+        <div className={`${s.card} ${s.radiusLg} ${styles.weatherCard}`}>
             <div className={styles.weatherCardTitle}>
                 <h3>No forecast data available</h3>
             </div>
@@ -38,7 +39,7 @@ export default function WeatherCard() {
     const weekForecast = forecast.slice(1);
 
     return (
-        <div className={styles.weatherCard}>
+        <div className={`${s.card} ${s.radiusLg} ${styles.weatherCard}`}>
             <div className={styles.weatherCardTitle}>
                 <h3>{LOCATION.name}</h3>
                 {getWeatherIcon(currentDay.weatherIcon)}

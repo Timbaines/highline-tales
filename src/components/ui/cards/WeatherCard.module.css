@@ -1,9 +1,7 @@
 .weatherCard {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 1rem;
+    /* CARD SURFACE STYLES */
     color: var(--color-text-secondary);
-    padding: 1rem;
+    padding: var(--space-4);
 }
 
 .weatherCardTitle {
@@ -43,13 +41,13 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin: 1.5rem 0;
+    margin: var(--space-6) 0;
 }
 
 .range {
     display: flex;
     justify-content: end;
-    gap: 0.75rem;
+    gap: var(--space-3);
 }
 
 .weatherCondition p {
@@ -66,12 +64,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.25rem;
+    padding: var(--space-1);
 }
 
 .forecastDay p {
     font-weight: 500;
-    margin: 0.25rem 0;
+    margin: var(--space-1) 0;
 }
 
 /***** MEDIA QUERIES *****/
@@ -81,14 +79,14 @@
     }
 
     .weatherCondition {
-        margin: 1rem 0;
+        margin: var(--space-4) 0;
     }
 }
 
 @media (max-width: 768px) {
     .weatherCard {
-        border-radius: .75rem;
-        padding: 0.75rem;
+        border-radius: var(--radius-md);
+        padding: var(--space-3);
     }
 
     .weatherTemp p {
@@ -96,7 +94,7 @@
     }
 
     .weatherCondition {
-        margin: 0.75rem 0;
+        margin: var(--space-3) 0;
     }
 }
 
@@ -106,7 +104,7 @@
     }
 
     .weatherCondition {
-        margin: 0.25rem 0;
+        margin: var(--space-1) 0;
     }
 
     .weatherCondition p {

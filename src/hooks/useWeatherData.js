@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { getFiveDayForecast } from '@/services/weather/weatherService.js';
 import { LOCATION, createMockForecastData } from '@/data/weatherMockData.js';
 
@@ -59,7 +59,7 @@ export default function useWeatherData(lat = LOCATION.lat, lon = LOCATION.lon) {
   const [forecast, setForecast] = useState([]);
   const retryRef = useRef(() => {});
 
-  const run = async () => {
+  const run = useCallback(async () => {
     setLoading(true);
     try {
       if (!API_KEY) throw new Error('Missing API key');
@@ -75,10 +75,10 @@ export default function useWeatherData(lat = LOCATION.lat, lon = LOCATION.lon) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [API_KEY, lat, lon]);
 
-  useEffect(() => { run(); }, [API_KEY, lat, lon]);
-  retryRef.current = run;
+  useEffect(() => { run(); }, [run]);
+  useEffect(() => { retryRef.current = run; }, [run]);
 
   return { forecast, loading, error, retry: () => retryRef.current() };
 }

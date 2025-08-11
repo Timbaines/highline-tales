@@ -1,10 +1,10 @@
 import { useLoaderData } from 'react-router-dom';
-import PostMeta from '@/components/common/PostMeta';
-import BackLinkNav from '@/components/common/BackLinkNav';
-import { parseContent } from '@/utils/contentParserUtils';
+import PostMeta from '@/components/common/PostMeta.jsx';
+import BackLinkNav from '@/components/common/BackLinkNav.jsx';
+import { parseContent } from '@/utils/contentParserUtils.jsx';
 
 /***** MODULE STYLES *****/
-import styles from '@/pages/blog/BlogPost.module.css';
+import styles from '@/components/blog/posts/BlogPost.module.css';
 
 export default function BlogPost() {
     const { post } = useLoaderData();

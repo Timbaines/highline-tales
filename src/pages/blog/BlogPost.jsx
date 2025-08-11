@@ -3,7 +3,6 @@ import PostMeta from '@/components/common/PostMeta';
 import BackLinkNav from '@/components/common/BackLinkNav';
 import { parseContent } from '@/utils/contentParserUtils.jsx';
 
-
 /***** MODULE STYLES *****/
 import styles from '@/pages/blog/BlogPost.module.css';
 
@@ -18,7 +17,7 @@ export default function BlogPost() {
                         <PostMeta date={post.date} author={post.author} className={styles.postMetaContainer} />
                     </header>
 
-                    <figure className={styles.contentFigure}>
+                    <figure>
                         <img
                             src={post.image}
                             alt={post.title}
@@ -26,8 +25,8 @@ export default function BlogPost() {
                         />
                     </figure>
 
-                    <div>
-                        {parseContent(post.content, styles)}
+                    <div className="prose">
+                        {parseContent(post.content)}
                     </div>
                 </article>
 

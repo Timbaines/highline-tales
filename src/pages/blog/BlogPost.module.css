@@ -31,59 +31,11 @@
 }
 
 /***** BLOG CONTENT CONTAINER | START *****/
-.contentImageContainer {
-    margin: 2rem 0;
-}
 
-.contentHeading {
-    color: var(--color-text-primary);
-}
 
-.contentFigure {
-    margin: 0;
-    width: 100%;
-}
-
-.contentImage {
-    background-color: var(--color-accent-primary);
-    width: 100%;
-    border-radius: 0.75rem;
-    object-fit: cover;
-    max-height: 500px;
-}
-
-.medium {
-    max-width: 75%;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Small-sized images */
-.small {
-    max-width: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-.imageCaption {
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    font-style: italic;
-    margin-top: 0.5rem;
-}
 /***** BLOG CONTENT CONTAINER | END *****/
 .postNav {
     margin-top: 3rem;
     padding: 3rem 0;
     border-top: 1px solid var(--color-border);
-}
-
-/***** MEDIA QUERIES *****/
-@media (max-width: 768px) {
-
-    .medium,
-    .small {
-        max-width: 100%;
-    }
-
 }

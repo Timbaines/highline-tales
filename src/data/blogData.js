@@ -21,7 +21,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Travel", "Airbnb"]
     },
     {

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import { Grid } from '@/components/layouts/index.js';
-import { getDifficultyColor } from '@/utils/difficulty.js';
-import BackLinkNav from "@/components/common/BackLinkNav.jsx";
+import { Grid } from '@/components/layouts/index';
+import { getDifficultyColor } from '@/utils/difficulty';
+import BackLinkNav from "@/components/shared/BackLinkNav";
 import DOMPurify from 'dompurify';
 
 /***** MODULE STYLES *****/

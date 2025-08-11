@@ -1,4 +1,6 @@
 import { isRouteErrorResponse, useRouteError, Link } from 'react-router-dom';
+
+/***** MODULE STYLES *****/
 import styles from '@/components/errors/ErrorBoundary.module.css';
 
 export default function RouteErrorElement() {

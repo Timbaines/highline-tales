@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
-import PostMeta from '@/components/common/PostMeta.jsx';
-import BackLinkNav from '@/components/common/BackLinkNav.jsx';
+import PostMeta from '@/components/shared/PostMeta.jsx';
+import BackLinkNav from '@/components/shared/BackLinkNav.jsx';
 import { parseContent } from '@/utils/contentParserUtils.jsx';
 
 /***** MODULE STYLES *****/

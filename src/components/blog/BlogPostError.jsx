@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import BackLinkNav from '@/components/common/BackLinkNav';
+import BackLinkNav from '@/components/shared/BackLinkNav';
 
 /***** MODULE STYLES *****/
 import styles from '@/components/errors/ErrorBoundary.module.css';

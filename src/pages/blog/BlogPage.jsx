@@ -1,6 +1,6 @@
 import { blogData } from '@/data/blogData';
 import ImageCardList from '@/components/ui/cards/ImageCardList';
-import Grid from '@/layouts/components/Grid';
+import Grid from '@/components/layouts/Grid';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/blog/BlogPage.module.css';

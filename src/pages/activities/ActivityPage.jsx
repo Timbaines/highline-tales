@@ -1,6 +1,6 @@
 import { activitiesData } from '@/data/activitiesData';
 import ImageCardList from '@/components/ui/cards/ImageCardList';
-import Grid from '@/layouts/components/Grid';
+import Grid from '@/components/layouts/Grid';
 
 
 /***** MODULE STYLES *****/

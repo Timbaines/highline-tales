@@ -1,5 +1,5 @@
 import GearList from '@/components/essentials/EssentialsList.jsx';
-import  Grid from '@/layouts/components/Grid';
+import  Grid from '@/components/layouts/Grid.jsx';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/essentials/EssentialsPage.module.css';

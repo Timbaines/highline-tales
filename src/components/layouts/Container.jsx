@@ -1,5 +1,5 @@
 /***** MODULE STYLES *****/
-import styles from '@/layouts/components/Container.module.css';
+import styles from '@/components/layouts/Container.module.css';
 
 export default function Container({ children, variant = 'default', className = ''}) {
     return (

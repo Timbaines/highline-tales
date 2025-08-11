@@ -1,5 +1,5 @@
 /***** MODULE STYLES *****/
-import styles from '@/layouts/components/Grid.module.css';
+import styles from '@/components/layouts/Grid.module.css';
 
 const VARIANT_MAP = {
     default: 'default',

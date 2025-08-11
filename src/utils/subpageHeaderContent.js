@@ -20,7 +20,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
       return {
         backgroundImage: '/banner-activities-page.webp',
         subtitle: 'GLACIER NATIONAL PARK',
-        title: 'Big Sky Highlights',
+        title: 'Big Sky Experiences',
         height: defaultHeight,
       };
     case '/blog':

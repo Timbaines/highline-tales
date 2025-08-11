@@ -46,7 +46,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -71,7 +71,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -96,7 +96,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -121,7 +121,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -146,7 +146,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -171,12 +171,12 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
         id: 8,
-        title: "Heading Home",
+        title: "Homebound",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/20/25",
@@ -196,7 +196,7 @@ export const blogData = [
             "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/mtn-vector-2.png",
+        image: "/banner-trail-gear.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
 ];

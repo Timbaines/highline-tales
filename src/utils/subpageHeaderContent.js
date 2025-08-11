@@ -1,37 +1,37 @@
 import { getActivityBySlug } from '@/services/activitiesService';
 
-/**
- * Compute banner content for SubpageHeader based on the current pathname and optional slug.
- * Returns an object with: { backgroundImage, subtitle, title, height }
- */
+
+ // COMPUTE BANNER CONTENT BASED ON ROUTE AND ACTIVITY SLUG
+ // RETURN OBJECT WITH BACKGROUND IMAGE, SUBTITLE, TITLE, AND HEIGHT
+
 export function getSubpageHeaderContent(pathname = '/', slug = '') {
-  // Common default height for subpage headers
+  // DEFAULT HEIGHT FOR ALL SUBPAGES
   const defaultHeight = '45vh';
 
   switch (pathname) {
     case '/hiking-checklist':
       return {
-        backgroundImage: '/ht-banner2.webp',
+        backgroundImage: '/banner-trail-gear.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Hiking Essentials',
         height: defaultHeight,
       };
     case '/activities':
       return {
-        backgroundImage: '/highline-trail-hero-banner.webp',
+        backgroundImage: '/banner-activities.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Big Sky Highlights',
         height: defaultHeight,
       };
     case '/blog':
       return {
-        backgroundImage: '/highline-trail-hero-banner.webp',
+        backgroundImage: '/banner-activities.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Trailing Tales',
         height: defaultHeight,
       };
     default:
-      // Handle dynamic activity pages
+      // HANDLE ACTIVITY DETAILS PAGE
       if (pathname.startsWith('/activities/') && slug) {
         const activity = getActivityBySlug(slug);
         if (activity) {
@@ -43,9 +43,9 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
           };
         }
       }
-      // Fallback for all other routes
+      // FALLBACK TO DEFAULT
       return {
-        backgroundImage: '/gallery-banner1.webp',
+        backgroundImage: '/banner-activities.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Highline Tales',
         height: defaultHeight,

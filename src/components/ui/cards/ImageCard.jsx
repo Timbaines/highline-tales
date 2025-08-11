@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { createSlug } from '@/utils/stringUtils';
+import { getDifficultyColor } from '@/utils/difficulty';
 
 /***** MODULE STYLES *****/
 import styles from '@/components/ui/cards/ImageCard.module.css';
-import { createSlug } from '@/utils/stringUtils';
-import { getDifficultyColor } from '@/utils/difficulty';
+import s from '@/styles/surfaces.module.css';
 
 export default function ContentCard({ item, contentType }) {
     const getPath = () => {
@@ -16,7 +17,7 @@ export default function ContentCard({ item, contentType }) {
         return '#';
     };
 
-    // Get description based on content type
+    // GET DESCRIPTION BASED ON CONTENT TYPE
     const getDescription = () => {
         if (contentType === 'activity') {
             return item.description;
@@ -26,11 +27,8 @@ export default function ContentCard({ item, contentType }) {
         return '';
     };
 
-    // Handle difficulty color for activities
-    // Color is computed by shared util getDifficultyColor(difficulty)
-
     return (
-        <article className={styles.activityCard}>
+        <article className={`${s.surface} ${s.radiusLg} ${s.shadowHoverMd} ${s.overflowHidden} ${styles.activityCard}`}>
             <div className={styles.activityCardInner}>
                 <div className={styles.activityCardImageContainer}>
                     <img

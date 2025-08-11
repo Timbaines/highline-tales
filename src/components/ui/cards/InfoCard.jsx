@@ -6,14 +6,14 @@ import styles from '@/components/ui/cards/InfoCard.module.css';
 export default function InfoCard() {
 
     const topCardData = {
-        title: "Our Glacier Experience",
+        title: "Trailing Tales",
         date: "July 30, 2025",
-        description: "Check out the highlights and photos from our recent adventure on the Highline Trail.",
+        description: "Check out the highlights and photos from our recent Montana adventure.",
         url: "/blog"
     };
 
     const bottomCardData = {
-        title: "Trail Hiking Essentials",
+        title: "Hiking Essentials",
         date: "July 28, 2025",
         description: "Explore our list of hiking essentials to stay safe, comfortable, and ready for Glacier’s terrain.",
         url: "/hiking-checklist"

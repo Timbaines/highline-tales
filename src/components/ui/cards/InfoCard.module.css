@@ -1,3 +1,4 @@
+
 .container {
     display: flex;
     flex-direction: column;
@@ -7,6 +8,8 @@
 
 .topCard,
 .bottomCard {
+    composes: card from 'Card.module.css';
+    composes: cardInteractive from 'Card.module.css';
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: 1rem;
@@ -48,6 +51,7 @@
 }
 
 .card {
+    composes: cardInner from 'Card.module.css';
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -66,7 +70,8 @@
 }
 
 .cardTitle {
-    font-size: 1.25rem;
+    composes: cardTitle from 'Card.module.css';
+    font-size: var(--font-size-lg);
     font-weight: 500;
     margin: 0;
 }
@@ -78,17 +83,18 @@
 }
 
 .cardDescription {
+    composes: cardDescription from 'Card.module.css';
     color: var(--color-text-secondary);
     margin: 1rem 0;
     overflow: auto;
 }
 
 .cardActions {
+    composes: cardActions from 'Card.module.css';
     margin-top: auto;
 }
 
 .cardLink {
-    color: var(--color-link-secondary);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
@@ -129,10 +135,6 @@
         overflow: auto;
     }
 
-    .cardTitle {
-        font-size: 1.1rem;
-    }
-
     .cardLink {
         font-size: 0.875rem;
     }
@@ -141,6 +143,7 @@
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+        margin-top: 2rem;
     }
 
     .topCard,
@@ -158,10 +161,6 @@
 
     .card {
         padding: 1rem;
-    }
-
-    .cardTitle {
-        margin: 2rem 0 0 0;
     }
 
     .cardDescription {

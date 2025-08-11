@@ -23,7 +23,7 @@ export const activitiesData = [
         "subtitle": "GLACIER NATIONAL PARK",
         "heading": "Guided Hiking Tour",
         "image": "/activity-highline-trail.webp",
-        "mapImage": "/activity-highline-trail-map.webp",
+        "mapImage": "/highline-trail-map.webp",
         "miles": 6,
         "difficulty": "Moderate",
         "date": "08/16/25",

@@ -3,8 +3,8 @@ import Header from '@/components/Header';
 import SubpageHeader from '@/components/SubpageHeader';
 import BlogPostHeader from '@/components/blog/BlogPostHeader';
 import Footer from '@/components/Footer';
-import VisitorCounter from "@/components/ui/VisitorCounter.jsx";
-import { Container } from '@/layouts/components';
+import VisitorCounter from "@/components/ui/VisitorCounter";
+import { Container } from '@/components/layouts/index';
 
 /***** MODULE STYLES *****/
 import styles from '@/layouts/MainLayout.module.css';

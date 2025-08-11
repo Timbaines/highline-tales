@@ -1,0 +1,68 @@
+/***** UTILITY HELPERS *****/
+
+/***** LAYOUT *****/
+.flex { display: flex; }
+.flexCol { display: flex; flex-direction: column; }
+.itemsCenter { align-items: center; }
+.justifyCenter { justify-content: center; }
+.justifyBetween { justify-content: space-between; }
+
+.grid { display: grid; }
+.gridGapSm { gap: var(--space-4); }
+.gridGapMd { gap: var(--space-6); }
+.gridGapLg { gap: var(--space-8); }
+
+/***** SPACING MARGIN AND PADDING *****/
+.mt0 { margin-top: var(--space-0); }
+.mtSm { margin-top: var(--space-4); }
+.mtMd { margin-top: var(--space-6); }
+.mtLg { margin-top: var(--space-8); }
+
+.mbSm { margin-bottom: var(--space-4); }
+.mbMd { margin-bottom: var(--space-6); }
+.mbLg { margin-bottom: var(--space-8); }
+
+.mySm { margin-top: var(--space-4); margin-bottom: var(--space-4); }
+.myMd { margin-top: var(--space-6); margin-bottom: var(--space-6); }
+.myLg { margin-top: var(--space-8); margin-bottom: var(--space-8); }
+
+.pxSm { padding-left: var(--space-4); padding-right: var(--space-4); }
+.pxMd { padding-left: var(--space-6); padding-right: var(--space-6); }
+.pxLg { padding-left: var(--space-8); padding-right: var(--space-8); }
+
+/***** GAP HELPERS | FOR FLEX & GRID ******/
+.gapSm { gap: var(--space-4); }
+.gapMd { gap: var(--space-6); }
+.gapLg { gap: var(--space-8); }
+
+/***** Visibility *****/
+.hiddenSm { }
+@media (max-width: 768px) {
+  .hiddenSm { display: none !important; }
+}
+
+.hiddenMd { }
+@media (max-width: 960px) {
+  .hiddenMd { display: none !important; }
+}
+
+.onlySm { display: none !important; }
+@media (max-width: 768px) {
+  .onlySm { display: block !important; }
+}
+
+/***** ACCESSIBILITY: VISUALLY HIDDEN *****/
+.visuallyHidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/***** TEXT *****/
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaCalendarAlt, FaTachometerAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import { Grid } from '@/layouts/components';
-import { getDifficultyColor } from '@/utils/difficulty';
-import BackLinkNav from "@/components/common/BackLinkNav";
+import { Grid } from '@/components/layouts/index.js';
+import { getDifficultyColor } from '@/utils/difficulty.js';
+import BackLinkNav from "@/components/common/BackLinkNav.jsx";
 import DOMPurify from 'dompurify';
 
 /***** MODULE STYLES *****/
-import styles from '@/pages/activities/ActivityPost.module.css';
-import gridStyles from '@/layouts/components/Grid.module.css';
+import styles from '@/components/activities/posts/ActivityPost.module.css';
+import gridStyles from '@/components/layouts/Grid.module.css';
 
 export default function ActivityPost() {
     const { activity } = useLoaderData();

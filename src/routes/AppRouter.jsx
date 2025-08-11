@@ -6,10 +6,12 @@ import MainLayout from '@/layouts/MainLayout';
 /***** PAGES *****/
 import HomePage from '@/pages/HomePage';
 import ActivityPage from '@/pages/activities/ActivityPage';
-import ActivityPost from '@/pages/activities/ActivityPost';
 import EssentialsPage from '@/pages/essentials/EssentialsPage';
 import BlogPage from '@/pages/blog/BlogPage';
-import BlogPost from '@/pages/blog/BlogPost.jsx';
+
+/***** POST PAGES *****/
+import ActivityPost from '@/components/activities/posts/ActivityPost';
+import BlogPost from '@/components/blog/posts/BlogPost';
 
 /***** SERVICES *****/
 import { getActivityBySlug } from '@/services/activitiesService';

@@ -1,5 +1,5 @@
 .primaryNav {
-    background: var(--color-bg-opacity-primary);
+    background: var(--color-bg-rgba-primary);
     backdrop-filter: blur(10px);
     border: 1px solid var(--color-border);
     border-radius: 1rem;
@@ -18,7 +18,7 @@
 .navList {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
     font-size: var(--font-size-sm);
 }
 
@@ -36,7 +36,7 @@
 }
 
 .navItem a:hover {
-    color: var(--color-link-hover);
+    color: var(--color-link-primary-hover);
 }
 
 .activeLink {
@@ -44,7 +44,7 @@
 }
 
 .activeLink:hover {
-    color: var(--color-link-hover);
+    color: var(--color-link-primary-hover);
 }
 
 /***** MEDIA QUERIES *****/
@@ -54,7 +54,6 @@
     }
     .navList {
         gap: 1rem;
-        font-size: 0.9rem;
     }
 
     .navLogoLink {
@@ -64,7 +63,7 @@
 
 @media (max-width: 768px) {
     .primaryNav {
-        padding: .5rem 00.75rem;
+        padding: .5rem 0.75rem;
     }
 
     .navItem {

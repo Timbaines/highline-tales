@@ -14,7 +14,7 @@ export default function BlogPostError() {
             <nav className={styles.actions}>
                 <BackLinkNav to="/blog">Back to Blog Page</BackLinkNav>
             </nav>
-            {process.env.NODE_ENV !== 'production' && error?.statusText && (
+            {import.meta.env?.DEV && error?.statusText && (
                 <pre className={styles.devError}>{error.statusText}</pre>
             )}
         </div>

@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 import PostMeta from '@/components/common/PostMeta';
 import BackLinkNav from '@/components/common/BackLinkNav';
-import { parseContent } from '@/utils/contentParserUtils.jsx';
+import { parseContent } from '@/utils/contentParserUtils';
 
 /***** MODULE STYLES *****/
 import styles from '@/pages/blog/BlogPost.module.css';

@@ -12,16 +12,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Travel", "Airbnb"]
     },
     {
@@ -37,16 +37,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -62,16 +62,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -87,16 +87,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -112,16 +112,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -137,16 +137,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -162,16 +162,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -187,16 +187,16 @@ export const blogData = [
             "Paragraph...<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Highline Trail\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Mountain goat\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>" +
-            "[img src=\"/mtn-vector-2.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
+            "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/banner-trail-gear.webp",
+        image: "/blog-post-day-1.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
 ];

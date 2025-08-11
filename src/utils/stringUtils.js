@@ -28,7 +28,7 @@ export function createSlug(str = '') {
       .replace(/^-+|-+$/g, '');          // trim hyphens
 
     return s || 'n-a'; // fallback to a safe placeholder
-  } catch (e) {
+  } catch {
     // In case an unexpected value is passed
     return 'n-a';
   }

@@ -14,8 +14,8 @@ export async function fetchJson(url, { method = 'GET', headers = {}, body, timeo
         });
         if (!res.ok) {
             let details;
-            try { details = await res.json(); } catch (e) {
-                try { details = await res.text(); } catch (e2) { /* ignore parse errors */ }
+            try { details = await res.json(); } catch {
+                try { details = await res.text(); } catch { /* ignore parse errors */ }
             }
             throw new ApiError(`HTTP ${res.status}`, { status: res.status, details, cause: res });
         }

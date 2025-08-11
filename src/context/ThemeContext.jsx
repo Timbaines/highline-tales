@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => {
     const context = useContext(ThemeContext);
     if (context === undefined) {
@@ -22,7 +23,7 @@ export function ThemeProvider({ children }) {
     };
 
     useEffect(() => {
-        document.body.classList.toggle("dark-mode", isDarkMode);
+        document.body.classList.toggle("theme-dark", isDarkMode);
         localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     }, [isDarkMode]);
 

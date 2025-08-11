@@ -7,7 +7,7 @@ import App from '@/App.jsx'
 import '@/styles/globals.css'
 import '@/styles/typography.css'
 import '@/styles/utilities.css'
-import '@/styles/prose.css'
+import '@/components/blog/styles/prose.css'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>

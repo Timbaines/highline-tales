@@ -6,7 +6,7 @@ import styles from '../components/Header.module.css';
 export default function Header() {
 
     const headerStyle = {
-        backgroundImage: `var(--color-gradient-primary), url(/mtn-ht-banner.webp)`,
+        backgroundImage: `var(--color-gradient-primary), url(/banner-home-page.webp)`,
         height: '50vh',
     }
 

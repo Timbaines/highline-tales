@@ -1,13 +1,11 @@
-/* Typography Scale */
-
 :root {
-    /* FLUID TYPOGRAPHY | BASE VALUES */
-    --font-size-h1-min: 2.25rem;       /* 32px | H1 MOBILE */
-    --font-size-h1-max: 3.5rem;       /* 48px | H1 DESKTOP */
-    --font-size-h2-min: 1.75rem;    /* 28px | H2 MOBILE */
-    --font-size-h2-max: 2.5rem;     /* 40px | H2 DESKTOP */
+    /* TYPOGRAPHY | BASE VALUES */
+    --font-size-h1-min: 2rem;       /* 32px | H1 MOBILE */
+    --font-size-h1-max: 3.75rem;    /* 48px | H1 DESKTOP */
+    --font-size-h2-min: 1.6rem;     /* 28px | H2 MOBILE */
+    --font-size-h2-max: 2.25rem;    /* 36px | H2 DESKTOP */
 
-    --font-size-h3-min: 1.5rem;     /* 24px | H3 MOBILE */
+    --font-size-h3-min: 1.6rem;     /* 24px | H3 MOBILE */
     --font-size-h3-max: 2rem;       /* 32px | H3 DESKTOP */
 
     --font-size-h4-min: 1.25rem;    /* 20px | H4 MOBILE */
@@ -20,23 +18,23 @@
     --font-size-h6-max: 1rem;       /* 16px | H6 DESKTOP */
 
     --font-size-display-min: 2.5rem; /* 40px | MOBILE */
-    --font-size-display-max: 4rem;   /* 64px - desktop */
+    --font-size-display-max: 4rem;   /* 64px | DESKTOP */
 
     /* BODY TEXT */
     --font-size-xl: clamp(1.125rem, 1vw + 1rem, 1.25rem);   /* 18px to 20px */
     --font-size-lg: clamp(1rem, 0.5vw + 0.9rem, 1.125rem);  /* 16px to 18px */
-    --font-size-base: 1rem;                                 /* 16px | CONSTANT */
-    --font-size-sm: 0.875rem;                               /* 14px | CONSTANT */
-    --font-size-xs: 0.75rem;                                /* 12px | CONSTANT */
+    --font-size-base: 1rem;                                 /* 16px */
+    --font-size-sm: 0.875rem;                               /* 14px */
+    --font-size-xs: 0.75rem;                                /* 12px */
 
     /* FONT SIZES | HERO | CAPTIONS | FOOTNOTES */
     --font-size-display: clamp(var(--font-size-display-min), 5vw, var(--font-size-display-max));
     --font-size-caption: 0.75rem; /* 12px */
 
     /* FONT WEIGHTS */
-    --font-weight-bold: 700;
+    --font-weight-normal: 500;
     --font-weight-medium: 600;
-    --font-weight-normal: 400;
+    --font-weight-bold: 700;
 
     /* LINE HEIGHTS */
     --line-height-tight: 1.2;
@@ -52,53 +50,71 @@
     --letter-spacing-normal: 0;
     --letter-spacing-wide: 0.05em;
 
-    /* MARGIN FOR HEADING TYPOGRAPHY */
+    /* MARGIN RESET FOR HEADING TYPOGRAPHY */
     --margin-none: 0;
 }
 
 h1 {
     font-size: clamp(var(--font-size-h1-min), 4vw, var(--font-size-h1-max));
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-medium);
     letter-spacing: var(--letter-spacing-h1);
     margin-top: 0;
     margin-bottom: 0;
 }
 
 h2 {
+    color: var(--color-text-primary);
     font-size: clamp(var(--font-size-h2-min), 3vw, var(--font-size-h2-max));
-    font-weight: var(--font-weight-medium);
-    letter-spacing: var(--letter-spacing-h2);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-h3);
     line-height: var(--line-height-tight);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-size: clamp(var(--font-size-h3-min), 2.5vw, var(--font-size-h3-max));
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal);
     letter-spacing: var(--letter-spacing-h3);
     line-height: var(--line-height-tight);
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 h4 {
     font-size: clamp(var(--font-size-h4-min), 1.5vw, var(--font-size-h4-max));
     line-height: var(--line-height-tight);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 h5 {
     font-size: clamp(var(--font-size-h5-min), 0.5vw, var(--font-size-h5-max));
     line-height: var(--line-height-tight);
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 h6 {
     font-size: clamp(var(--font-size-h6-min), 0.5vw, var(--font-size-h6-max));
     line-height: var(--line-height-tight);
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
-body, p {
+p {
     font-size: var(--font-size-base);
     line-height: var(--line-height-normal);
+    margin-bottom: 1.5rem;
 }
 
-small {
-    font-size: var(--font-size-sm);
+/* ENSURE TEXT SIZES ARE ADJUSTED FOR LANDSCAPE ORIENTATION */
+@media screen and (orientation: landscape) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        font-size: 16px;
+    }
 }
-

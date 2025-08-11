@@ -1,0 +1,32 @@
+.surface {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/***** CARD INCLUDING PADDING *****/
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.cardHover:hover,
+.shadowHoverMd:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/***** RADIUS VARIANTS *****/
+.radiusSm { border-radius: var(--radius-sm); }
+.radiusMd { border-radius: var(--radius-md); }
+.radiusLg { border-radius: var(--radius-lg); }
+
+/***** SHADOW VARIANTS *****/
+.shadowSm { box-shadow: var(--shadow-sm); }
+.shadowMd { box-shadow: var(--shadow-md); }
+.shadowLg { box-shadow: var(--shadow-lg); }
+
+/***** MISC *****/
+.overflowHidden { overflow: hidden; }

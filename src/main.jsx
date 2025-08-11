@@ -6,6 +6,8 @@ import App from '@/App.jsx'
 /***** GLOBAL STYLES *****/
 import '@/styles/globals.css'
 import '@/styles/typography.css'
+import '@/styles/utilities.css'
+import '@/styles/prose.css'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>

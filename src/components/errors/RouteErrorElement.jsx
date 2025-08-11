@@ -19,7 +19,7 @@ export default function RouteErrorElement() {
       <div className={styles.actions}>
         <Link to="/">Go to Home</Link>
       </div>
-      {process.env.NODE_ENV !== 'production' && error && (
+      {import.meta.env?.DEV && error && (
         <pre className={styles.devError}>
           {isRouteErrorResponse(error)
             ? JSON.stringify({ status: error.status, statusText: error.statusText, data: error.data }, null, 2)

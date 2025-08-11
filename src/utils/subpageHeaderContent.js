@@ -11,21 +11,21 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
   switch (pathname) {
     case '/hiking-checklist':
       return {
-        backgroundImage: '/banner-trail-gear.webp',
+        backgroundImage: '/banner-trail-gear-page.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Hiking Essentials',
         height: defaultHeight,
       };
     case '/activities':
       return {
-        backgroundImage: '/banner-activities.webp',
+        backgroundImage: '/banner-activities-page.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Big Sky Highlights',
         height: defaultHeight,
       };
     case '/blog':
       return {
-        backgroundImage: '/banner-activities.webp',
+        backgroundImage: '/banner-blog-page.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Trailing Tales',
         height: defaultHeight,
@@ -45,7 +45,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
       }
       // FALLBACK TO DEFAULT
       return {
-        backgroundImage: '/banner-activities.webp',
+        backgroundImage: '/banner-activities-page.webp',
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Highline Tales',
         height: defaultHeight,

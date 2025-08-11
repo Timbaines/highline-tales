@@ -28,7 +28,7 @@ export default class GlobalErrorBoundary extends React.Component {
           <div className={styles.actions}>
             <Link to="/">Go to Home</Link>
           </div>
-          {process.env.NODE_ENV !== 'production' && err && (
+          {import.meta.env?.DEV && err && (
             <pre className={styles.devError}>{String(err?.stack || err?.message || err)}</pre>
           )}
         </div>

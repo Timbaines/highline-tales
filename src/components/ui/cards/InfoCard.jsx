@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaMountain } from "react-icons/fa";
 
 /***** MODULE STYLES *****/
 import styles from '@/components/ui/cards/InfoCard.module.css';
@@ -22,6 +23,13 @@ export default function InfoCard() {
     const renderCard = (data) => (
         <article className={styles.card}>
             <div className={styles.cardContent}>
+                <div className={styles.cardIcon}>
+                    <span>
+                        <FaMountain
+                        size={30}
+                        />
+                    </span>
+                </div>
                 <div className={styles.cardHeader}>
                     <h3 className={styles.cardTitle}>
                         <Link to={data.url}>{data.title}</Link>

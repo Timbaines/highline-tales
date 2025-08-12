@@ -21,7 +21,7 @@ HighlineTales is a React + Vite application that shares trail information, hikin
 ## Features
 
 - Trail and activity pages with images, stats, and details
-- Blog with individual post pages (data loaders, error elements)
+- Blog with individual post-pages (data loaders, error elements)
 - Hiking checklist/essentials page
 - Visitor counter backed by Supabase (RPC function increment_page_view)
 - Responsive layout with CSS Modules and global typography/utilities
@@ -49,10 +49,10 @@ flowchart LR
   C --> F(AppRouter)
   F -->|/| G[HomePage]
   F -->|/activities| H[ActivityPage]
-  F -->|/activities/:slug| I[ActivityPost\n(loader: getActivityBySlug)]
+  F -->|/activities/:slug| I[ActivityPost<br>(loader: getActivityBySlug)]
   F -->|/hiking-checklist| J[EssentialsPage]
   F -->|/blog| K[BlogPage]
-  F -->|/blog/:slug| L[BlogPost\n(loader: getPostBySlug)]
+  F -->|/blog/:slug| L[BlogPost<br>(loader: getPostBySlug)]
   subgraph Services
     M[activitiesService]
     N[blogService]
@@ -113,7 +113,7 @@ flowchart LR
    └─ test/setupTests.js      # Vitest setup (jest-dom)
 ```
 
-Tip: Import using the @ alias, e.g. import App from '@/App.jsx'.
+Tip: Import using the @ alias, e.g., import App from '@/App.jsx'.
 
 
 ## Routing map
@@ -222,6 +222,3 @@ For local development, you can still use `npm run dev` to start the Vite develop
 ## License
 
 This project is licensed under the MIT License.
-
-
-

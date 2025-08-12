@@ -49,10 +49,10 @@ flowchart LR
   C --> F(AppRouter)
   F -->|/| G[HomePage]
   F -->|/activities| H[ActivityPage]
-  F -->|/activities/:slug| I[ActivityPost<br>(loader: getActivityBySlug)]
+  F -->|/activities/:slug| I[ActivityPost]
   F -->|/hiking-checklist| J[EssentialsPage]
   F -->|/blog| K[BlogPage]
-  F -->|/blog/:slug| L[BlogPost<br>(loader: getPostBySlug)]
+  F -->|/blog/:slug| L[BlogPost]
   subgraph Services
     M[activitiesService]
     N[blogService]
@@ -66,6 +66,9 @@ flowchart LR
   end
   E -. catches .-> F
 ```
+Note: 
+- ActivityPost (I) uses the loader `getActivityBySlug`
+- BlogPost (L) uses the loader `getPostBySlug`
 
 
 ## Project structure

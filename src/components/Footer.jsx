@@ -11,23 +11,23 @@ export default function Footer() {
     return (
         <div className={styles.footer}>
             <div className={styles.footerContainer}>
-                <Link to="/" className={styles.footerLogoLink}>
+                <Link to="/" className={styles.footerLogoLink} aria-label="Go to homepage">
                     <Logo />
                 </Link>
                 <div className={styles.footerTechStack}>
-                    <a href="https://vite.dev" target="_blank">
+                    <a href="https://vite.dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Vite website">
                         <img src={viteLogo}
                              className={styles.footerTechIcons}
                              alt="Vite logo"
                         />
                     </a>
-                    <a href="https://react.dev/" target="_blank">
+                    <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit React website">
                         <img src={reactLogo}
                              className={styles.footerTechIcons}
                              alt="React logo"
                         />
                     </a>
-                    <a href="https://supabase.com/" target="_blank">
+                    <a href="https://supabase.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Supabase website">
                         <img src={supabaseLogo}
                              className={styles.footerTechIcons}
                              alt="Supabase logo"

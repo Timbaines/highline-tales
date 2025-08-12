@@ -13,7 +13,7 @@ export default function PrimaryNav() {
 
     return (
         <nav className={styles.primaryNav}>
-            <Link to="/" className={styles.navLogoLink}>
+            <Link to="/" className={styles.navLogoLink} aria-label="Go to homepage">
                 <Logo />
             </Link>
             <ul className={styles.navList}>

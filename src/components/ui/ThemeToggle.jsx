@@ -12,6 +12,7 @@ const ThemeToggle = ({ className, ...props }) => {
             type="button"
             onClick={toggleTheme}
             className={`${styles.themeToggle} ${className || ''}`}
+            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
             {...props}
         >
             {isDarkMode ? <FiSun size={14} /> : <FiMoon size={14} />}

@@ -1,33 +1,19 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { supabase } from "@/supabase/supabase.js";
+import { trackPageViewOncePerSession, fetchPageViews } from "@/services/analytics/visitorAnalytics.js";
 
 /***** MODULE STYLES *****/
 import styles from '@/components/ui/VisitorCounter.module.css';
 
-export default function VisitorCounter() {
+export default function VisitorCounter({ env = import.meta.env, storage = (typeof window !== 'undefined' ? window.localStorage : undefined) } = {}) {
     const [views, setViews] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const location = useLocation();
     const slug = location.pathname;
 
-    // DEVELOPMENT ONLY TOGGLE WITH LOCALSTORAGE PERSISTENCE
-    const [analyticsEnabled, setAnalyticsEnabled] = useState(() => {
-        // CHECK TO SEE IF IN DEV MODE
-        if (import.meta.env.DEV) {
-            const savedState = localStorage.getItem('analyticsEnabled');
-            // IF SAVED STATE, USE IT, OTHERWISE USE THE ENV VARIABLE DEFAULT
-            if (savedState !== null) {
-                return savedState === 'true';
-            }
-        }
-        // DEFAULT TO ENV VARIABLE
-        return import.meta.env.VITE_ENABLE_ANALYTICS === 'true';
-    });
-
-    // ONLY SHOW TOGGLE IN DEVELOPMENT
-    const isDev = import.meta.env.DEV;
+    // DETERMINE ANALYTICS ENABLED FROM ENVIRONMENT ONLY (NO DEV TOGGLE/PERSISTENCE)
+    const analyticsEnabled = env?.VITE_ENABLE_ANALYTICS === 'true';
 
     useEffect(() => {
         // SKIP IF ANALYTICS ARE DISABLED
@@ -36,49 +22,38 @@ export default function VisitorCounter() {
             return;
         }
 
-        // Function to increment page view
+        // FUNCTION TO INCREMENT PAGE VIEW COUNT
         const incrementPageView = async () => {
             setIsLoading(true);
             setError(null);
 
             try {
-                // CHECKS SINGLE PAGE VIEW SESSION
-                const viewedPages = JSON.parse(localStorage.getItem('viewedPages') || '{}');
-
-                // FIRST TIME VISIT - INCREMENT
-                if (!viewedPages[slug]) {
-                    try {
-                        await supabase.rpc('increment_page_view', {
-                            page_slug: slug
-                        });
-
-                        // MARK PAGE AS VIEWED IN SESSION
-                        viewedPages[slug] = true;
-                        localStorage.setItem('viewedPages', JSON.stringify(viewedPages));
-                    } catch (error) {
+                // INCREMENT ONCE PER SESSION
+                try {
+                    await trackPageViewOncePerSession(slug, storage);
+                } catch (error) {
+                    if (import.meta.env.DEV) {
+                        // AVOID LOGS IN PRODUCTION
                         console.error('Error tracking page view:', error);
-                        setError('Failed to increment view count');
                     }
+                    setError('Failed to increment view count');
                 }
 
-                // FETCH VIEW COUNT REGARDLESS
-                const { data, error: fetchError } = await supabase
-                    .from('analytics')
-                    .select('views')
-                    .eq('slug', slug)
-                    .single();
-
+                // FETCH VIEW COUNT
+                const { views, error: fetchError } = await fetchPageViews(slug);
                 if (fetchError && fetchError.code !== 'PGRST116') { // ROW NOT FOUND ERROR
-                    console.error('Error fetching page views:', fetchError);
+                    if (import.meta.env.DEV) {
+                        console.error('Error fetching page views:', fetchError);
+                    }
                     setError('Failed to fetch view count');
                     return;
                 }
 
-                if (data) {
-                    setViews(data.views);
-                }
+                setViews(views);
             } catch (err) {
-                console.error('Unexpected error:', err);
+                if (import.meta.env.DEV) {
+                    console.error('Unexpected error:', err);
+                }
                 setError('An unexpected error occurred');
             } finally {
                 setIsLoading(false);
@@ -86,9 +61,9 @@ export default function VisitorCounter() {
         };
 
         incrementPageView();
-    }, [slug, analyticsEnabled]);
+    }, [slug, analyticsEnabled, storage]);
 
-    // ANALYTICS INDICATOR DOT
+    // ANALYTICS INDICATOR DOT (shown in staging)
     const indicatorStyle = {
         display: 'inline-block',
         width: '10px',
@@ -99,46 +74,19 @@ export default function VisitorCounter() {
         // GREEN ENABLED | RED DISABLED
     };
 
-    // RENDER IN VISITOR COUNTER IF IN DEV MODE
-    if (isDev) {
-        return (
-            <div className={styles.visitorContainer}>
-                <div className={styles.visitorCounter}>
-                    <label>
-                        <input
-                            type="checkbox"
-                            checked={analyticsEnabled}
-                            onChange={() => setAnalyticsEnabled(!analyticsEnabled)}
-                        />
-                        Enable
-                    </label>
-                    {analyticsEnabled ? (
-                        isLoading ? (
-                            <p>...</p>
-                        ) : (
-                            <p>{views} Visitors</p>
-                        )
-                    ) : (
-                        <p>Analytics Disabled</p>
-                    )}
-                </div>
-            </div>
-        );
-    }
-
-    // LOADER FUNCTION
+    // LOADER STATE
     if (isLoading) {
         return (
             <div className={styles.visitorContainer}>
                 <div className={styles.visitorCounter}>
                     <p>...</p>
-                    <p>Visitors</p>
+                    <p>Page Views</p>
                 </div>
             </div>
         );
     }
 
-    // ERROR FUNCTION
+    // ERROR STATE
     if (error) {
         return (
             <div className={styles.visitorContainer}>
@@ -155,12 +103,11 @@ export default function VisitorCounter() {
             <div className={styles.visitorCounter}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     {/* INDICATOR DOT VISIBLE FOR STAGING/TESTING IN PROD */}
-                    {import.meta.env.MODE === 'staging' && (
+                    {env?.MODE === 'staging' && (
                         <span style={{ ...indicatorStyle, width: '6px', height: '6px' }}></span>
                     )}
                     <p>{views} Page Views</p>
                 </div>
-
             </div>
         </div>
     );

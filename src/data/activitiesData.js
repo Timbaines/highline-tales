@@ -40,7 +40,7 @@ export const activitiesData = [
         "title": "Rising Sun Boat Tour",
         "subtitle": "ST. MARY LAKE",
         "heading": "Rising Sun Boat Tour",
-        "image": "/activity-st-mary-lake.webp",
+        "image": "/activity-st-mary-lake-boat-tour.webp",
         "mapImage": "/map-rising-sun-boat-tour.webp",
         "miles": 5,
         "difficulty": "Easy",

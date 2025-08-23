@@ -58,7 +58,7 @@ export const activitiesData = [
         "title": "Western Alpine Tour",
         "subtitle": "RED BUS",
         "heading": "Western Alpine Scenic Views",
-        "image": "/activity-red-bus-tour.webp",
+        "image": "/activity-west-alpine-bus-tour.webp",
         "mapImage": "/map-rising-sun-boat-tour.webp",
         "miles": 50,
         "difficulty": "Easy",

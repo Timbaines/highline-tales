@@ -1,6 +1,6 @@
 # HighlineTales
 
-HighlineTales is a hiking-themed web application built as part of my JavaScript learning journey, inspired by my vacation to Glacier National Park and the Highline Trail. It combines activity guides, blog posts sharing our ‘trailing’ stories, and planning tools centered on Glacier’s iconic Highline Trail.
+HighlineTales is a hiking-themed web application built as part of my JavaScript learning journey, inspired by me and my wife's vacation to Glacier National Park. It combines activity guides, blog posts sharing our ‘trailing’ stories, and planning tools centered on Glacier’s iconic Highline Trail.
 
 
 

@@ -21,7 +21,7 @@ export const blogData = [
             "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/blog/highlinetales-day1-flying-to-montana-arrival-airbnb.webp",
+        image: "/blog/montana-travel-airbnb-arrival-day1.webp",
         tags: ["Planning", "Travel", "Airbnb"]
     },
     {
@@ -46,7 +46,7 @@ export const blogData = [
             "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/blog/highlinetales-day2-kayaking-exploring-bigfork.webp",
+        image: "/blog/bigfork-montana-flathead-lake-kayaking-day2.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {

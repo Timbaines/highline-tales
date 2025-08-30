@@ -96,7 +96,7 @@ export const blogData = [
             "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/blog/highlinetales-day4-glacier-institute-highline-trail.webp",
+        image: "/blog/glacier-national-park-highline-trail-day4.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {

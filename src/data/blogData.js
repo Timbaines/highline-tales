@@ -151,7 +151,7 @@ export const blogData = [
     },
     {
         id: 7,
-        title: "Good Eats & One Last Night In Town",
+        title: "Free Roaming & One Final Night in Town",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/19/25",

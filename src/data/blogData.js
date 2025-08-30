@@ -26,7 +26,7 @@ export const blogData = [
     },
     {
         id: 2,
-        title: "Kayaking & Exploring Bigfork",
+        title: "Kayaking Flathead Lake & Exploring Bigfork",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/14/25",
@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "Cruising the Glacier From East To West",
+        title: "Glacier National Park – West to East & Highway 2 Loop",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",

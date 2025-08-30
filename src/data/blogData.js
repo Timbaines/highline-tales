@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "Cruising the Glacier",
+        title: "Circling The Glacier",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",
@@ -76,7 +76,7 @@ export const blogData = [
     },
     {
         id: 4,
-        title: "Hiking The Highline",
+        title: "Hiking The Highline Trail",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/16/25",
@@ -101,7 +101,7 @@ export const blogData = [
     },
     {
         id: 5,
-        title: "St. Mary's Boat Tour",
+        title: "St. Mary's Tour & Trail Of The Cedars",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/17/25",
@@ -126,7 +126,7 @@ export const blogData = [
     },
     {
         id: 6,
-        title: "Jammers & Whitefish Vibes",
+        title: "Red Jammers & Whitefish Vibes",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/18/25",

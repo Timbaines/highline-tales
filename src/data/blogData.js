@@ -81,7 +81,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/16/25",
         slug: "montana-vacation-day-4-highline-trail",
-        excerpt: "Cliffside trails, wildlife encounters, expert guides, and an unforgettable alpine scenic view adventure.",
+        excerpt: "Cliffside trails, wildlife encounters, expert guides, park history and an unforgettable 7 mile alpine adventure.",
         content: "[h2]Day 4[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +
@@ -131,7 +131,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/18/25",
         slug: "montana-vacation-day-6-western-alpine-tour",
-        excerpt: "Open-Top vintage Red Bus adventure, tacos that give back, and relaxing to live music in a creative, outdoor town hub.",
+        excerpt: "Open-Top Vintage Red Bus adventure, tacos that give back, and relaxing to live music in a creative, outdoor town hub.",
         content: "[h2]Day 6[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +

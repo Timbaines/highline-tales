@@ -24,7 +24,7 @@ export const activitiesData = [
         "heading": "Guided Hiking Tour",
         "image": "/activity-highline-trail.webp",
         "mapImage": "/map-rising-sun-boat-tour.webp",
-        "miles": 6,
+        "miles": 7,
         "difficulty": "Moderate",
         "date": "08/16/25",
         "description": "An 8 hour guided hiking tour. We will learn about the geology, wildlife and history on the way up.",

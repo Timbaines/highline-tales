@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "West To East Glacier & Highway 2 Loop",
+        title: "From West to East Glacier – The Highway 2 Loop",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",

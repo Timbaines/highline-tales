@@ -151,7 +151,7 @@ export const blogData = [
     },
     {
         id: 7,
-        title: "Last Night Out In Town",
+        title: "Last Night In Town",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/19/25",

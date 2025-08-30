@@ -126,7 +126,7 @@ export const blogData = [
     },
     {
         id: 6,
-        title: "Red Jammer Rides & Downtown Whitefish Vibes",
+        title: "Red Jammer Rides & Whitefish Vibes",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/18/25",
@@ -151,7 +151,7 @@ export const blogData = [
     },
     {
         id: 7,
-        title: "Free Roaming, Good Eats & One Final Night in Town",
+        title: "Free Day to Roam & Last Night in Town",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/19/25",

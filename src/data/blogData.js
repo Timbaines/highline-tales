@@ -30,8 +30,8 @@ export const blogData = [
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/14/25",
-        slug: "Paddles in hand, sunshine on the lake, exploring Bigfork, and ending the day with comfort food and ice cream.",
-        excerpt: "Day 2: Kayaking",
+        slug: "montana-vacation-day-2-exploring-bigfork",
+        excerpt: "Paddles in hand, sunshine on the lake, exploring Bigfork, and ending the day with comfort food and ice cream.",
         content: "[h2]Day 2[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +

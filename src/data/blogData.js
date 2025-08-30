@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "Glacier National Park – West to East & Highway 2 Loop",
+        title: "West To East Glacier & Highway 2 Loop",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",
@@ -71,7 +71,7 @@ export const blogData = [
             "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/blog-post-day-1.webp",
+        image: "/blog/highlinetales-day3-lake-mcdonald-logan-pass.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {

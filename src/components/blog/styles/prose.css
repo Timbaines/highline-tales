@@ -129,4 +129,7 @@
   .prose img[data-size="small"] {
     max-width: 100%;
   }
+    .prose figcaption {
+        text-align: left;
+    }
 }

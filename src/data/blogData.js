@@ -56,7 +56,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/15/25",
         slug: "montana-vacation-day-3-wildlife-watching",
-        excerpt: "Iconic mountain drives, lakeside lunch, breathtaking views, and downtown Whitefish charm.",
+        excerpt: "Iconic mountain drives, lakeside lunch, breathtaking views, and enjoying the downtown Whitefish scenery.",
         content: "[h2]Day 3[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +
@@ -81,7 +81,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/16/25",
         slug: "montana-vacation-day-4-highline-trail",
-        excerpt: "Cliffside trails, wildlife encounters, expert guides, and an unforgettable alpine adventure.",
+        excerpt: "Cliffside trails, wildlife encounters, expert guides, and an unforgettable alpine scenic view adventure.",
         content: "[h2]Day 4[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +
@@ -106,7 +106,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/17/25",
         slug: "montana-vacation-day-5-glacier-national-park",
-        excerpt: "Scenic drives, glacial waters, narrated boat tour, peaceful forest walks, and pizza by the lake.",
+        excerpt: "Scenic drives, glacial waters, narrated boat tour, peaceful forest walks, and pizza by Lake McDonald.",
         content: "[h2]Day 5[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +
@@ -131,7 +131,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/18/25",
         slug: "montana-vacation-day-6-western-alpine-tour",
-        excerpt: "Vintage Red Bus adventure, tacos that give back, and live music in a creative, outdoor town hub.",
+        excerpt: "Vintage Red Bus adventure, tacos that give back, and relaxing to live music in a creative, outdoor town hub.",
         content: "[h2]Day 6[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +
@@ -156,7 +156,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/19/25",
         slug: "montana-vacation-day-7-lakeside-relaxation",
-        excerpt: "Shopping for keepsakes, indulging in local favorites, and ending with live music and small-town magic.",
+        excerpt: "Shopping for keepsakes, indulging in local favorites, and ending the night with live music and small-town magic.",
         content: "[h2]Day 7[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +
@@ -181,7 +181,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/20/25",
         slug: "montana-vacation-day-8-travel-home",
-        excerpt: "Final strolls, last bites of Whitefish charm, smooth travels home, and reflections on a week to remember.",
+        excerpt: "Final strolls, last bites of the downtown Whitefish charm, smooth travels home, and reflections on a week to remember.",
         content: "[h2]Day 8[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +

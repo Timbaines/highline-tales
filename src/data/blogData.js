@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "From West to East Glacier – The Highway 2 Loop",
+        title: "West to East Glacier & the Highway 2 Loop",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",
@@ -71,7 +71,7 @@ export const blogData = [
             "[img src=\"/card-bg.png\" alt=\"Alpine wildflowers\" caption=\"Caption\" size=\"full\"]<br><br>" +
             "[h3]H3[/h3]<br><br>" +
             "Paragraph...<br><br>",
-        image: "/blog/highlinetales-day3-lake-mcdonald-logan-pass.webp",
+        image: "/blog/glacier-park-logan-pass-lake-mcdonald-day3.webp",
         tags: ["Planning", "Trips", "Glacier"]
     },
     {
@@ -126,7 +126,7 @@ export const blogData = [
     },
     {
         id: 6,
-        title: "Red Jammer Rides & Whitefish Vibes",
+        title: "Red Jammer Bus Rides & Whitefish Vibes",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/18/25",

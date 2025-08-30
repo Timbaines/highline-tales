@@ -26,7 +26,7 @@ export const blogData = [
     },
     {
         id: 2,
-        title: "Exploring Bigfork",
+        title: "Kayaking & Exploring Bigfork",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/14/25",
@@ -76,7 +76,7 @@ export const blogData = [
     },
     {
         id: 4,
-        title: "Hiking The Highline Trail",
+        title: "Hiking The Highline With Glacier Institute",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/16/25",
@@ -101,7 +101,7 @@ export const blogData = [
     },
     {
         id: 5,
-        title: "St. Mary's Tour & Trail Of The Cedars",
+        title: "St. Mary's Boat Tour & Trail Of The Cedars",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/17/25",
@@ -151,7 +151,7 @@ export const blogData = [
     },
     {
         id: 7,
-        title: "Last Night In Town",
+        title: "Good Eats & One Last Night In Town",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/19/25",

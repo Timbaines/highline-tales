@@ -126,7 +126,7 @@ export const blogData = [
     },
     {
         id: 6,
-        title: "Red Jammer Rides & Whitefish Vibes",
+        title: "Red Jammer Rides & Downtown Whitefish Vibes",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/18/25",

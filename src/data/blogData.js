@@ -81,7 +81,7 @@ export const blogData = [
         author: "Sarah & Tim Baines",
         date: "08/16/25",
         slug: "montana-vacation-day-4-highline-trail",
-        excerpt: "Cliffside trails, wildlife encounters, expert guides, park history and an unforgettable 7 mile alpine adventure.",
+        excerpt: "Cliffside trails, wildlife encounters, expert guides, park history and an unforgettable 7 mile alpine hiking adventure.",
         content: "[h2]Day 4[/h2]<br><br>" +
             "Excerpt<br><br>" +
             "Paragraph...<br><br>" +

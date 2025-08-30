@@ -76,7 +76,7 @@ export const blogData = [
     },
     {
         id: 4,
-        title: "Hiking The Highline With Glacier Institute",
+        title: "Highline Trail Hiking With Glacier Institute",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/16/25",

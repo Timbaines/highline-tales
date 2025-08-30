@@ -1,7 +1,7 @@
 export const blogData = [
     {
         id: 1,
-        title: "Flight to Montana",
+        title: "A Travel Rollercoaster",
         subtitle: "Day 1",
         author: "Sarah & Tim Baines",
         date: "08/13/25",
@@ -26,7 +26,7 @@ export const blogData = [
     },
     {
         id: 2,
-        title: "Flathead Lake",
+        title: "Exploring Bigfork",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/14/25",
@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "Wildlife Watching",
+        title: "Cruising the Glacier",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",
@@ -76,7 +76,7 @@ export const blogData = [
     },
     {
         id: 4,
-        title: "Highline Trail",
+        title: "Hiking The Highline",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/16/25",
@@ -101,7 +101,7 @@ export const blogData = [
     },
     {
         id: 5,
-        title: "St. Mary Lake",
+        title: "St. Mary's Boat Tour",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/17/25",
@@ -126,7 +126,7 @@ export const blogData = [
     },
     {
         id: 6,
-        title: "Western Alpine",
+        title: "Jammers & Whitefish Vibes",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/18/25",
@@ -151,7 +151,7 @@ export const blogData = [
     },
     {
         id: 7,
-        title: "Big Sky Tour",
+        title: "Last Night Out In Town",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/19/25",
@@ -176,7 +176,7 @@ export const blogData = [
     },
     {
         id: 8,
-        title: "Homebound",
+        title: "Homeward Bound",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/20/25",

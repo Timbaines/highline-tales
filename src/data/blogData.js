@@ -51,7 +51,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "Circling The Glacier",
+        title: "Cruising the Glacier From East To West",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/15/25",

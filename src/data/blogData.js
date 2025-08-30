@@ -1,7 +1,7 @@
 export const blogData = [
     {
         id: 1,
-        title: "A Travel Rollercoaster To Montana",
+        title: "The Montana Travel Rollercoaster",
         subtitle: "Day 1",
         author: "Sarah & Tim Baines",
         date: "08/13/25",

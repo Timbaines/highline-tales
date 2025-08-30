@@ -176,7 +176,7 @@ export const blogData = [
     },
     {
         id: 8,
-        title: "Homeward Bound",
+        title: "Homeward Bound – Back to Virginia Beach",
         subtitle: "TRIP PLANNING",
         author: "Sarah & Tim Baines",
         date: "08/20/25",

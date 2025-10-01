@@ -6,7 +6,7 @@ export const blogData = [
         author: "Tim & Sarah Baines",
         date: "08/13/25",
         slug: "montana-vacation-day-1-travel-to-montana",
-        excerpt: "Travel chaos, last-minute flights, late-night arrival, and huckleberry cinnamon rolls to start our adventure.",
+        excerpt: "Travel chaos, last-minute flights, late-night arrival, and sweet huckleberry cinnamon rolls to start our adventure.",
         content: "[h2]Day 1[/h2]<br><br>" +
             "Travel chaos, last-minute flights, late-night arrival, and huckleberry cinnamon rolls to start our adventure.<br><br>" +
             "Our Montana adventure started before sunrise. Sarah and I woke up at A 3:30am to discover that our United Airlines flight for 5:40am had been canceled. I took care of cancelling transportation to the airport, while Sarah rebooked with Delta for the same day: ORF (Norfolk) → ORD (Chicago), departing at 4:38pm.<br><br>" +

@@ -7,6 +7,7 @@ import { getActivityBySlug } from '@/services/activitiesService';
 export function getSubpageHeaderContent(pathname = '/', slug = '') {
   // DEFAULT HEIGHT FOR ALL SUBPAGES
   const defaultHeight = '45vh';
+  const minHeight = '300px';
 
   switch (pathname) {
     case '/hiking-checklist':
@@ -15,6 +16,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Hiking Essentials',
         height: defaultHeight,
+        minHeight: minHeight,
       };
     case '/activities':
       return {
@@ -22,6 +24,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Travel Experiences',
         height: defaultHeight,
+        minHeight: minHeight,
       };
     case '/blog':
       return {
@@ -29,6 +32,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Trailing Tales',
         height: defaultHeight,
+        minHeight: minHeight,
       };
     default:
       // HANDLE ACTIVITY DETAILS PAGE
@@ -40,6 +44,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
             subtitle: `${activity.subtitle}`,
             title: activity.title,
             height: defaultHeight,
+            minHeight: minHeight,
           };
         }
       }
@@ -49,6 +54,7 @@ export function getSubpageHeaderContent(pathname = '/', slug = '') {
         subtitle: 'GLACIER NATIONAL PARK',
         title: 'Highline Tales',
         height: defaultHeight,
+        minHeight: minHeight,
       };
   }
 }

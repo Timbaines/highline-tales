@@ -8,6 +8,19 @@
     background-color: var(--color-bg-primary);
     padding: .5rem 0;
     position: relative;
+    flex-shrink: 0; /* PREVENT HEADER FROM SHRINKING */
+}
+
+
+.subpageHeader {
+    height: 45vh;
+    min-height: 300px; /* FALLBACK FOR MIN-HEIGHT */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .headerNavContainer {
@@ -15,6 +28,7 @@
     max-width: 1366px;
     margin: 0 auto;
     padding: 0 1rem;
+    flex-shrink: 0; /* PREVENT HEADER FROM SHRINKING */
 }
 
 @media (max-width: 960px) {
@@ -27,5 +41,12 @@
 @media (max-width: 768px) {
     .headerNavContainer {
         padding: 0 .75rem;
+    }
+}
+
+
+@media (max-height: 600px) {
+    .subpageHeader {
+        min-height: 250px;
     }
 }

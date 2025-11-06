@@ -9,7 +9,7 @@ export default function InfoCard() {
     const topCardData = {
         title: "Trailing Tales",
         date: "July 30, 2025",
-        description: "Check out the highlights and photos from our recent Montana adventure.",
+        description: "Check out the highlights and photos from our adventures in Montana and Glacier National Park.",
         url: "/blog"
     };
 
